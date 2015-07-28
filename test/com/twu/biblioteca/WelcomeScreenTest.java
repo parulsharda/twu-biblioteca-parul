@@ -12,21 +12,24 @@ import static junit.framework.TestCase.assertEquals;
 public class WelcomeScreenTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    PrintStream original;
 
     @Before
     public void setUpStreams() {
+        original = System.out;
         System.setOut(new PrintStream(outContent));
     }
 
-    @After
-    public void cleanUpStreams() {
-        System.setOut(null);
-    }
-
     @Test
-    public void out() {
+    public void checkTheInput() {
         WelcomeScreen welcomeScreen = new WelcomeScreen();
         welcomeScreen.welcome();
         assertEquals("Welcome to Biblioteca", outContent.toString());
     }
+
+    @After
+    public void cleanUpStreams() {
+        System.setOut(original);
+    }
+
 }
