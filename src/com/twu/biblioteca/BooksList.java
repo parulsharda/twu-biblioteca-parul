@@ -1,14 +1,18 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class BooksList {
 
-    ArrayList<String> BooksList = new ArrayList<String>();
+    ArrayList<String> booksList = new ArrayList<String>();
 
     public ArrayList<String> showBookList() {
-        return BooksList;
+        booksList.add("The Hunger Games");
+        booksList.add("Harry Potter");
+        booksList.add("Gone With the Wind");
+
+        return booksList;
     }
 }
+
