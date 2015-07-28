@@ -9,7 +9,7 @@ import java.io.PrintStream;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class WelcomeScreenTest {
+public class IOTest {
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream original;
@@ -22,9 +22,9 @@ public class WelcomeScreenTest {
 
     @Test
     public void checkTheInput() {
-        WelcomeScreen welcomeScreen = new WelcomeScreen();
+        IO welcomeScreen = new IO();
         welcomeScreen.welcome();
-        assertEquals("Welcome to Biblioteca", outContent.toString());
+        assertEquals("Welcome to Biblioteca\n", outContent.toString());
     }
 
     @After
