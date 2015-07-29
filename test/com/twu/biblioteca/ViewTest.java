@@ -28,6 +28,7 @@ public class ViewTest {
         assertEquals("Welcome to Biblioteca\n", outContent.toString());
     }
 
+
     @Test
     public void checkTheBooksListMessage() {
         View view = new View();

@@ -27,8 +27,4 @@ public class View {
             System.out.print("\n");
         }
     }
-
-    /*public void displayMenu() {
-
-    }*/
 }
