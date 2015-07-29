@@ -35,6 +35,14 @@ public class ViewTest {
         assertEquals("\n", outContent.toString());
     }
 
+
+    @Test
+    public void checkThePrintingOfFormat() {
+        View welcomeScreen = new View();
+        welcomeScreen.printSeperator();
+        assertEquals("- - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -", outContent.toString());
+    }
+
     @Test
     public void checkTheBooksListMessage() {
         View view = new View();
