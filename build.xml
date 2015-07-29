@@ -9,7 +9,7 @@
     <target name="unit_tests" depends="compile">
         <junit haltonerror="true" haltonfailure="true" printsummary="true">
             <classpath location="lib/junit-4.11.jar" path="antBuild"/>
-            <test name="com.twu.biblioteca.IOTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.ViewTest" haltonfailure="true" haltonerror="true"/>
         </junit>
     </target>
 
