@@ -14,6 +14,10 @@ public class View {
             System.out.println(" " + books);
     }
 
+    public void printnewline()
+    {
+        System.out.print("\n");
+    }
 
     public void showDetailsOfBook(ArrayList<ArrayList<String>> collection) {
         System.out.print("\n Books Details:\n|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n");
@@ -24,7 +28,7 @@ public class View {
             for (int j = 0; j < currentList.size(); j++) {
                 System.out.print("\t" + currentList.get(j) + "\t\t|");
             }
-            System.out.print("\n");
+            printnewline();
         }
     }
 }

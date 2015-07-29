@@ -28,6 +28,12 @@ public class ViewTest {
         assertEquals("Welcome to Biblioteca\n", outContent.toString());
     }
 
+    @Test
+    public void checkThePrintingOfNewline() {
+        View welcomeScreen = new View();
+        welcomeScreen.printnewline();
+        assertEquals("\n", outContent.toString());
+    }
 
     @Test
     public void checkTheBooksListMessage() {
