@@ -14,8 +14,12 @@ public class Parser {
 
             public OperationOnLibrarry convertIntoDomain(String userInput) {
                 OperationOnLibrarry operationOnLibrarry;
+
                 if (userInput.equals("List Books")) {
                     operationOnLibrarry = new ListOfBooks(view, collection);
+                }
+                else if (userInput.equals("Check Out")) {
+                    operationOnLibrarry = new CheckOut(view, collection);
                 }
                 else if (userInput.equals("Quit")) {
                     operationOnLibrarry = new Quit();

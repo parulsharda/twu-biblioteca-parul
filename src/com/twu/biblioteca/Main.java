@@ -10,8 +10,10 @@ public class Main {
         ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
         ArrayList<String> libraryBook1 = new ArrayList<String>();
         ArrayList<String> libraryBook2 = new ArrayList<String>();
+       // ArrayList<ArrayList<String>> checkedout = new ArrayList<ArrayList<String>>();
         Parser parser = new Parser(view,collection);
         BibliotecaApp application = new BibliotecaApp(view,parser);
+        Library library = new Library(collection);
 
 
         libraryBook1.add("Games of Thrones");

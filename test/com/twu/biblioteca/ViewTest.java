@@ -62,7 +62,7 @@ public class ViewTest {
         view.displayMenu();
 
         Assert.assertEquals("\n\nEnter your choice from the Menu:\n1. List Books\n" +
-                "2. Quit\n", outContent.toString());
+                "2. Quit\n3. Check Out\n", outContent.toString());
     }
 
 

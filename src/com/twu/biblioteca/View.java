@@ -38,7 +38,7 @@ public class View {
 
     public void displayMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.print("1. List Books\n2. Quit\n");
+        System.out.print("1. List Books\n2. Quit\n3. Check Out\n");
     }
 
     public void displayInvalidCommandMessage() {
