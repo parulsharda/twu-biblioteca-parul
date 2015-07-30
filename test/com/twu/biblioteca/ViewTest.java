@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -53,6 +54,16 @@ public class ViewTest {
                 "|\tGone With the Wind \t\t|\tMargaret Mitchell\t\t|\t1936\t\t|\n", outContent.toString());
     }
 
+
+    @Test
+    public void viewCanDisplayListOfAvailableMenu() {
+        View view = new View();
+
+        view.displayMenu();
+
+        Assert.assertEquals("\n\nMenu:\n1. List Books\n" +
+                "2. Quit\n", outContent.toString());
+    }
 
     @After
     public void cleanUpStreams() {

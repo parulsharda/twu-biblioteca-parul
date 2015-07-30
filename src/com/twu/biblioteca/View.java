@@ -29,4 +29,9 @@ public class View {
         }
     }
 
+    public void displayMenu() {
+        System.out.println("\n\nMenu:");
+        System.out.print("1. List Books\n2. Quit\n");
+        }
 }
+

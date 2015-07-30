@@ -15,6 +15,7 @@ public class BibliotecaApp {
     public void start() {
         view.welcome();
         view.showDetailsOfBook(collection);
+        view.displayMenu();
     }
 }
 
