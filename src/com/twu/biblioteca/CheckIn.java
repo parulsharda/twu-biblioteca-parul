@@ -18,10 +18,7 @@ public class CheckIn implements OperationOnLibrarry {
     public void execute() {
         String requestedBook = view.acceptInput();
         if (library.checkIn(requestedBook)) {
-            view.successMsg();
-        }
-        else {
-            view.noSuccessMsg();
+            view.successReturnMsg();
         }
     }
 

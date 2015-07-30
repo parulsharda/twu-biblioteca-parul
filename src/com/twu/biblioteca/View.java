@@ -47,11 +47,16 @@ public class View {
     }
 
     public void successMsg() {
-        System.out.println("Successful CheckOut");
+        System.out.println("Thank you! Enjoy the book");
     }
 
     public void noSuccessMsg() {
-        System.out.println("Unsuccessful Checkout");
+        System.out.println("That book is not available");
+    }
+
+
+    public void successReturnMsg() {
+        System.out.println("Thank you for returning the book");
     }
 }
 
