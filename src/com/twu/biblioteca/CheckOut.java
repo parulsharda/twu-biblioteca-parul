@@ -21,6 +21,9 @@ public class CheckOut implements OperationOnLibrarry {
         if (library.checkout(requestedBook)) {
             view.successMsg();
         }
+        else {
+            view.noSuccessMsg();
+        }
     }
 }
 

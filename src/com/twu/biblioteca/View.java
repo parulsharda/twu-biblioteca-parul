@@ -50,5 +50,8 @@ public class View {
         System.out.println("Successful CheckOut");
     }
 
+    public void noSuccessMsg() {
+        System.out.println("Unsuccessful Checkout");
+    }
 }
 
