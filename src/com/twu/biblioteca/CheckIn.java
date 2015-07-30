@@ -20,6 +20,10 @@ public class CheckIn implements OperationOnLibrarry {
         if (library.checkIn(requestedBook)) {
             view.successReturnMsg();
         }
+        else {
+            view.noSuccessReturnMsg();
+        }
+
     }
 
 }
