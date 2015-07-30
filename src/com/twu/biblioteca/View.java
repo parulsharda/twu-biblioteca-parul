@@ -46,5 +46,9 @@ public class View {
         System.out.println("Select a valid option!");
     }
 
+    public void successMsg() {
+        System.out.println("Successful CheckOut");
+    }
+
 }
 

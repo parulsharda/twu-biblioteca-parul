@@ -6,9 +6,9 @@ public class CheckOut implements OperationOnLibrarry {
 
     private View view;
     private ArrayList<ArrayList<String>> collection;
-    private  Library library;
+    private Library library;
 
-    public CheckOut(View view, ArrayList<ArrayList<String>> collection,Library library) {
+    public CheckOut(View view, ArrayList<ArrayList<String>> collection, Library library) {
         this.view = view;
         this.collection = collection;
         this.library = library;
@@ -18,8 +18,8 @@ public class CheckOut implements OperationOnLibrarry {
     @Override
     public void execute() {
         String requestedBook = view.acceptInput();
-        if(library.checkout(requestedBook)) {
-            view.showDetailsOfBook(collection);
+        if (library.checkout(requestedBook)) {
+            view.successMsg();
         }
     }
 }
