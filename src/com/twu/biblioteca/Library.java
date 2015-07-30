@@ -22,4 +22,16 @@ public class Library {
         }
         return false;
     }
+
+    public boolean checkIn(String bookToBeReturned) {
+        for (ArrayList<String> book : checkoutList) {
+            if (book.get(0).equals(bookToBeReturned)) {
+                checkoutList.remove(book);
+                collection.add(book);
+                return true;
+            }
+        }
+        return false;
+    }
 }
+

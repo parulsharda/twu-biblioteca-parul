@@ -15,7 +15,6 @@ public class CheckOutTest {
         View view = Mockito.mock(View.class);
         Library library = Mockito.mock(Library.class);
         ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
-        ArrayList<ArrayList<String>> collection1 = new ArrayList<ArrayList<String>>();
         ArrayList<String> book = new ArrayList<String>();
         book.add("Game Of Thrones");
         collection.add(book);

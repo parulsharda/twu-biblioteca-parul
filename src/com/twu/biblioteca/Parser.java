@@ -23,6 +23,9 @@ public class Parser {
                 else if (userInput.equals("Check Out")) {
                     operationOnLibrarry = new CheckOut(view, collection,library);
                 }
+                else if (userInput.equals("Return Book")) {
+                    operationOnLibrarry = new CheckIn(view, collection,library);
+                }
                 else if (userInput.equals("Quit")) {
                     operationOnLibrarry = new Quit();
                 }
