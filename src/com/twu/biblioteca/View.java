@@ -2,6 +2,7 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 
+
 public class View {
 
     public void welcome() {
@@ -14,26 +15,17 @@ public class View {
             System.out.println(" " + books);
     }
 
-    public void printnewline()
-    {
-        System.out.print("\n");
-    }
-
-
-    public void printSeperator() {
-        System.out.println(" - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -");
-    }
 
     public void showDetailsOfBook(ArrayList<ArrayList<String>> collection) {
         System.out.print("\n Books Details:\n|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n");
-        printSeperator();
+        System.out.println(" - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -");
         for (int i = 0; i < collection.size(); i++) {
             System.out.print("|");
             ArrayList<String> currentList = collection.get(i);
             for (int j = 0; j < currentList.size(); j++) {
                 System.out.print("\t" + currentList.get(j) + "\t\t|");
             }
-            printnewline();
+            System.out.print("\n");
         }
     }
 

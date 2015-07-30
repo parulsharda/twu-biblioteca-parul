@@ -6,11 +6,13 @@ public class Main {
 
     public static void main(String args[]) {
         View view = new View();
+        Controller controller = new Controller(view);
         ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
         ArrayList<String> libraryBook1 = new ArrayList<String>();
         ArrayList<String> libraryBook2 = new ArrayList<String>();
-
         BibliotecaApp application = new BibliotecaApp(view,collection);
+
+
 
         libraryBook1.add("Games of Thrones");
         libraryBook1.add("George R. R. Martin");

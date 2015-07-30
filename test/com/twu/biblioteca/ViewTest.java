@@ -29,21 +29,6 @@ public class ViewTest {
     }
 
     @Test
-    public void checkThePrintingOfNewline() {
-        View welcomeScreen = new View();
-        welcomeScreen.printnewline();
-        assertEquals("\n", outContent.toString());
-    }
-
-
-    @Test
-    public void checkThePrintingOfFormat() {
-        View welcomeScreen = new View();
-        welcomeScreen.printSeperator();
-        assertEquals("- - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -", outContent.toString());
-    }
-
-    @Test
     public void checkTheBooksListMessage() {
         View view = new View();
         ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
