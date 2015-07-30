@@ -8,6 +8,7 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 import static junit.framework.TestCase.assertEquals;
 
@@ -47,13 +48,12 @@ public class ViewTest {
         collection.add(libraryBook2);
 
         view.showDetailsOfBook(collection);
-        assertEquals("\n Books Details:\n" +
+        assertEquals("\nBooks Details:\n" +
                 "|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n" +
                 " - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -\n" +
                 "|\tGames of Thrones\t\t|\tGeorge R. R. Martin\t\t|\t1996\t\t|\n" +
                 "|\tGone With the Wind \t\t|\tMargaret Mitchell\t\t|\t1936\t\t|\n", outContent.toString());
     }
-
 
     @Test
     public void viewCanDisplayListOfAvailableMenu() {
@@ -61,9 +61,20 @@ public class ViewTest {
 
         view.displayMenu();
 
-        Assert.assertEquals("\n\nMenu:\n1. List Books\n" +
+        Assert.assertEquals("\n\nEnter your choice from the Menu:\n1. List Books\n" +
                 "2. Quit\n", outContent.toString());
     }
+
+
+    @Test
+    public void viewCanDisplayInvalidCommandMessage() {
+        View view = new View();
+
+        view.displayInvalidCommandMessage();
+
+        Assert.assertEquals("Select a valid option!\n", outContent.toString());
+    }
+
 
     @After
     public void cleanUpStreams() {

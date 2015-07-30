@@ -20,7 +20,7 @@
     </target>
 
     <target name="run" depends="createJar">
-        <java classname="com.twu.biblioteca.BibliotecaApp">
+        <java classname="com.twu.biblioteca.Main">
             <classpath>
                 <pathelement location="lib/app.jar"/>
                 <pathelement path="${java.class.path}"/>

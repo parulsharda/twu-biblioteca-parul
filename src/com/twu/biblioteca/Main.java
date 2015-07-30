@@ -13,7 +13,6 @@ public class Main {
         BibliotecaApp application = new BibliotecaApp(view,collection);
 
 
-
         libraryBook1.add("Games of Thrones");
         libraryBook1.add("George R. R. Martin");
         libraryBook1.add("1996");
@@ -25,7 +24,5 @@ public class Main {
         collection.add(libraryBook2);
 
         application.start();
-
-
     }
 }

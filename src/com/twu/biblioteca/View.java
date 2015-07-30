@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 
 public class View {
@@ -17,7 +18,7 @@ public class View {
 
 
     public void showDetailsOfBook(ArrayList<ArrayList<String>> collection) {
-        System.out.print("\n Books Details:\n|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n");
+        System.out.print("\nBooks Details:\n|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n");
         System.out.println(" - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -");
         for (int i = 0; i < collection.size(); i++) {
             System.out.print("|");
@@ -29,9 +30,19 @@ public class View {
         }
     }
 
+    public String acceptInput()
+    {
+        Scanner sc = new Scanner(System.in);
+        return sc.nextLine();
+    }
+
     public void displayMenu() {
-        System.out.println("\n\nMenu:");
+        System.out.println("\n\nEnter your choice from the Menu:");
         System.out.print("1. List Books\n2. Quit\n");
-        }
+    }
+
+    public void displayInvalidCommandMessage() {
+        System.out.println("Select a valid option!");
+    }
 }
 

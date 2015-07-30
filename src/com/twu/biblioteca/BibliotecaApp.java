@@ -12,10 +12,14 @@ public class BibliotecaApp {
         this.view = view;
     }
 
+
     public void start() {
         view.welcome();
-        view.showDetailsOfBook(collection);
-        view.displayMenu();
+        while(true) {
+            //view.showDetailsOfBook(collection);
+            view.displayMenu();
+            String input = view.acceptInput();
+        }
     }
 }
 
