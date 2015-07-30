@@ -1,16 +1,17 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
 
     public static void main(String args[]) {
         View view = new View();
-        Controller controller = new Controller(view);
         ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
         ArrayList<String> libraryBook1 = new ArrayList<String>();
         ArrayList<String> libraryBook2 = new ArrayList<String>();
-        BibliotecaApp application = new BibliotecaApp(view,collection);
+        Parser parser = new Parser(view,collection);
+        BibliotecaApp application = new BibliotecaApp(view,parser);
 
 
         libraryBook1.add("Games of Thrones");
@@ -26,3 +27,4 @@ public class Main {
         application.start();
     }
 }
+

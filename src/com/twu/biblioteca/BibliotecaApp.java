@@ -1,26 +1,24 @@
 package com.twu.biblioteca;
 
-import java.util.ArrayList;
-
 
 public class BibliotecaApp {
-    View view;
-    ArrayList<ArrayList<String>> collection;
 
-    public BibliotecaApp(View view, ArrayList<ArrayList<String>> collection) {
-        this.collection = collection;
+    private View view;
+    private Parser parser;
+
+    public BibliotecaApp(View view, Parser parser) {
         this.view = view;
+        this.parser = parser;
     }
-
 
     public void start() {
         view.welcome();
-        while(true) {
-            //view.showDetailsOfBook(collection);
+        while (true) {
             view.displayMenu();
-            String input = view.acceptInput();
+            String userInput = view.acceptInput();
+            OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput);
+            libraryOperation.execute();
         }
     }
 }
-
 
