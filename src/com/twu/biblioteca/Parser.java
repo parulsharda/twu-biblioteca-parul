@@ -5,11 +5,13 @@ import java.util.ArrayList;
 public class Parser {
 
             private View view;
-            ArrayList<ArrayList<String>> collection;
+            private ArrayList<ArrayList<String>> collection;
+            private Library library;
 
-            public Parser(View view, ArrayList<ArrayList<String>> collection) {
+            public Parser(View view, ArrayList<ArrayList<String>> collection,Library library) {
                 this.view = view;
                 this.collection = collection;
+                this.library = library;
             }
 
             public OperationOnLibrarry convertIntoDomain(String userInput) {
@@ -19,7 +21,7 @@ public class Parser {
                     operationOnLibrarry = new ListOfBooks(view, collection);
                 }
                 else if (userInput.equals("Check Out")) {
-                    operationOnLibrarry = new CheckOut(view, collection);
+                    operationOnLibrarry = new CheckOut(view, collection,library);
                 }
                 else if (userInput.equals("Quit")) {
                     operationOnLibrarry = new Quit();

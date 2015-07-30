@@ -41,8 +41,10 @@ public class View {
         System.out.print("1. List Books\n2. Quit\n3. Check Out\n");
     }
 
+
     public void displayInvalidCommandMessage() {
         System.out.println("Select a valid option!");
     }
+
 }
 

@@ -14,13 +14,12 @@ public class Library {
 
     public boolean checkout(String bookToBeCheckedOut) {
         for (ArrayList<String> book : collection) {
-            if(book.get(0) == bookToBeCheckedOut)
-            {
+            if (book.get(0).equals(bookToBeCheckedOut)) {
                 collection.remove(book);
                 checkoutList.add(book);
                 return true;
             }
         }
-    return false;
+        return false;
     }
 }

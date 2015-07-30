@@ -8,16 +8,17 @@ public class CheckOut implements OperationOnLibrarry {
     private ArrayList<ArrayList<String>> collection;
     private  Library library;
 
-    public CheckOut(View view, ArrayList<ArrayList<String>> collection) {
+    public CheckOut(View view, ArrayList<ArrayList<String>> collection,Library library) {
         this.view = view;
         this.collection = collection;
+        this.library = library;
     }
 
 
     @Override
     public void execute() {
         String requestedBook = view.acceptInput();
-        if(library.checkout(requestedBook) ==  true) {
+        if(library.checkout(requestedBook)) {
             view.showDetailsOfBook(collection);
         }
     }
