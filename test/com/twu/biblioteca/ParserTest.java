@@ -20,7 +20,5 @@ public class ParserTest {
 
         OperationOnLibrarry result = parser.convertIntoDomain("List Books");
 
-        assertEquals(ListOfBooks.class, result.getClass());
-    }
-
-}*/
+        assertEquals(ListOfBooks.class, result.getClas
+        */

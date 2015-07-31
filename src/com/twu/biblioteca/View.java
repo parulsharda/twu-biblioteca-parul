@@ -18,14 +18,10 @@ public class View {
 
 
     public void showDetailsOfBook(ArrayList<ArrayList<String>> collection) {
-        System.out.print("\nBooks Details:\n|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n");
-        System.out.println(" - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -");
+        System.out.format("%-25s%25s%25s\n","Name","Author","Years");
         for (int i = 0; i < collection.size(); i++) {
-            System.out.print("|");
             ArrayList<String> currentList = collection.get(i);
-            for (int j = 0; j < currentList.size(); j++) {
-                System.out.print("\t" + currentList.get(j) + "\t\t|");
-            }
+            System.out.format("%-25s%25s%25s",currentList.get(0),currentList.get(1),currentList.get(2));
             System.out.print("\n");
         }
     }
@@ -38,7 +34,7 @@ public class View {
 
     public void displayMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.print("1. List Books\n2. Quit\n3. Check Out\n4.Return Book\n");
+        System.out.println("1. List Books\n2. Quit\n3. Check Out\n4. Return Book");
     }
 
 

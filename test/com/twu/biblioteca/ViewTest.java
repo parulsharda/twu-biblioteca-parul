@@ -48,11 +48,14 @@ public class ViewTest {
         collection.add(libraryBook2);
 
         view.showDetailsOfBook(collection);
-        assertEquals("\nBooks Details:\n" +
-                "|\t\t\tName\t\t\t|\t\t\tAuthor\t\t\t|\tYera\t\t|\n" +
-                " - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - -\n" +
-                "|\tGames of Thrones\t\t|\tGeorge R. R. Martin\t\t|\t1996\t\t|\n" +
-                "|\tGone With the Wind \t\t|\tMargaret Mitchell\t\t|\t1936\t\t|\n", outContent.toString());
+        assertEquals("Name                                        Author                    Years\n" +
+                "Games of Thrones               George R. R. Martin                     1996\n" +
+                "Gone With the Wind               Margaret Mitchell                     1936\n",outContent.toString());
+        /*assertEquals("Name                                        Author                    Years
+                        - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - - -
+
+                        Games of Thrones               George R. R. Martin                     1996
+                Gone With the Wind               Margaret Mitchell                     1936", outContent.toString());*/
     }
 
     @Test
@@ -62,7 +65,7 @@ public class ViewTest {
         view.displayMenu();
 
         Assert.assertEquals("\n\nEnter your choice from the Menu:\n1. List Books\n" +
-                "2. Quit\n3. Check Out\n4. Return Book", outContent.toString());
+                "2. Quit\n3. Check Out\n4. Return Book\n", outContent.toString());
     }
 
 
@@ -78,6 +81,7 @@ public class ViewTest {
 
     @After
     public void cleanUpStreams() {
+
         System.setOut(original);
     }
 

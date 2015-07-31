@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import org.junit.Test;
+
 import java.util.ArrayList;
 
 import static junit.framework.TestCase.assertEquals;
@@ -17,6 +18,6 @@ public class LibraryTest {
 
         Library library = new Library(collection);
 
-        assertEquals(true,library.checkout("Game Of Thrones"));
+        assertEquals(true, library.checkout("Game Of Thrones"));
         }
 }
