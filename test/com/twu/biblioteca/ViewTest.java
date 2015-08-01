@@ -33,7 +33,12 @@ public class ViewTest {
     @Test
     public void checkTheBooksListMessage() {
         View view = new View();
-        ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
+        ArrayList<Book> collection = new ArrayList<Book>();
+        Book book1 =  new Book("Game of Thrones","George R. R. Martin","1996");
+        Book book2 = new Book("Gone With the Wind","Margaret Mitchell","1936");
+        collection.add(book1);
+        collection.add(book2);
+       /* ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
         ArrayList<String> libraryBook1 = new ArrayList<String>();
         ArrayList<String> libraryBook2 = new ArrayList<String>();
 
@@ -45,12 +50,12 @@ public class ViewTest {
         libraryBook2.add("Gone With the Wind ");
         libraryBook2.add("Margaret Mitchell");
         libraryBook2.add("1936");
-        collection.add(libraryBook2);
+        collection.add(libraryBook2);*/
 
         view.showDetailsOfBook(collection);
         assertEquals("Name                                        Author                    Years\n" +
-                "Games of Thrones               George R. R. Martin                     1996\n" +
-                "Gone With the Wind               Margaret Mitchell                     1936\n",outContent.toString());
+                "Game of Thrones				George R. R. Martin					1996\n" +
+                "Gone With the Wind				Margaret Mitchell					1936\n",outContent.toString());
         /*assertEquals("Name                                        Author                    Years
                         - - - - - - - - - - - - - -- - - -- - - - -- - - - - - - - - - - - - - - -
 

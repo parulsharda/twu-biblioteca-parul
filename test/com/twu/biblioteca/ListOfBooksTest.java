@@ -10,7 +10,7 @@ public class ListOfBooksTest {
     @Test
     public void listBookKnowsHowToListTheBook() {
         View view = Mockito.mock(View.class);
-        ArrayList<ArrayList<String>> library = new ArrayList<ArrayList<String>>();
+        ArrayList<Book> library = new ArrayList<Book>();
         ListOfBooks listBooks = new ListOfBooks(view, library);
 
         listBooks.execute();

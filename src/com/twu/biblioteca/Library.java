@@ -4,17 +4,17 @@ import java.util.ArrayList;
 
 public class Library {
 
-    ArrayList<ArrayList<String>> collection;
-    ArrayList<ArrayList<String>> checkoutList;
+    ArrayList<Book> collection;
+    ArrayList<Book> checkoutList;
 
-    public Library(ArrayList<ArrayList<String>> collection) {
+    public Library(ArrayList<Book> collection) {
         this.collection = collection;
-        this.checkoutList = new ArrayList<ArrayList<String>>();
+        this.checkoutList = new ArrayList<Book>();
     }
 
     public boolean checkout(String bookToBeCheckedOut) {
-        for (ArrayList<String> book : collection) {
-            if (book.get(0).equals(bookToBeCheckedOut)) {
+        for (Book book : collection) {
+            if (book.hasTitle(bookToBeCheckedOut)) {
                 collection.remove(book);
                 checkoutList.add(book);
                 return true;
@@ -24,8 +24,8 @@ public class Library {
     }
 
     public boolean checkIn(String bookToBeReturned) {
-        for (ArrayList<String> book : checkoutList) {
-            if (book.get(0).equals(bookToBeReturned)) {
+        for (Book book : checkoutList) {
+            if (book.hasTitle(bookToBeReturned)) {
                 checkoutList.remove(book);
                 collection.add(book);
                 return true;

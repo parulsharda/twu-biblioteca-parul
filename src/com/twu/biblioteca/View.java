@@ -17,12 +17,15 @@ public class View {
     }
 
 
-    public void showDetailsOfBook(ArrayList<ArrayList<String>> collection) {
+    public void showDetailsOfBook(ArrayList<Book> collection) {
         System.out.format("%-25s%25s%25s\n","Name","Author","Years");
-        for (int i = 0; i < collection.size(); i++) {
-            ArrayList<String> currentList = collection.get(i);
+       /* for (int i = 0; i < collection.size(); i++) {
+            ArrayList<Book> currentList = collection.get(i);
             System.out.format("%-25s%25s%25s",currentList.get(0),currentList.get(1),currentList.get(2));
             System.out.print("\n");
+        }*/
+        for (Book book : collection) {
+            System.out.println(book);
         }
     }
 

@@ -16,4 +16,10 @@ public class Book {
         return searchTitle.equals(bookname);
 
     }
+
+    @Override
+    public  String toString()
+    {
+        return bookname + "\t\t\t\t" + author + "\t\t\t\t\t" + year ;
+    }
 }

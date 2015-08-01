@@ -7,26 +7,14 @@ public class Main {
 
     public static void main(String args[]) {
         View view = new View();
-        ArrayList<ArrayList<String>> collection = new ArrayList<ArrayList<String>>();
-        ArrayList<String> libraryBook1 = new ArrayList<String>();
-        ArrayList<String> libraryBook2 = new ArrayList<String>();
+        ArrayList<Book> collection = new ArrayList<Book>();
+        Book book1 =  new Book("Game of Thrones","George R. R. Martin","1996");
+        Book book2 = new Book("Gone With the Wind","Margaret Mitchell","1936");
+        collection.add(book1);
+        collection.add(book2);
         Library library = new Library(collection);
-        // ArrayList<ArrayList<String>> checkedout = new ArrayList<ArrayList<String>>();
         Parser parser = new Parser(view,collection,library);
         BibliotecaApp application = new BibliotecaApp(view,parser);
-
-
-
-
-        libraryBook1.add("Games of Thrones");
-        libraryBook1.add("George R. R. Martin");
-        libraryBook1.add("1996");
-        collection.add(libraryBook1);
-
-        libraryBook2.add("Gone With the Wind ");
-        libraryBook2.add("Margaret Mitchell");
-        libraryBook2.add("1936");
-        collection.add(libraryBook2);
 
         application.start();
     }

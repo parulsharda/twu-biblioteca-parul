@@ -5,10 +5,10 @@ import java.util.ArrayList;
 public class Parser {
 
             private View view;
-            private ArrayList<ArrayList<String>> collection;
+            private ArrayList<Book> collection;
             private Library library;
 
-            public Parser(View view, ArrayList<ArrayList<String>> collection,Library library) {
+            public Parser(View view, ArrayList<Book> collection,Library library) {
                 this.view = view;
                 this.collection = collection;
                 this.library = library;
