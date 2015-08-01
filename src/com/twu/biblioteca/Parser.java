@@ -29,6 +29,9 @@ public class Parser {
                 else if (userInput.equals("Quit")) {
                     operationOnLibrarry = new Quit();
                 }
+                else if(userInput.equals("List CheckedOut Book")) {
+                    operationOnLibrarry = new ListOfCheckedOutBook(view,collection,library);
+                }
                 else {
                     operationOnLibrarry = new InvalidOption(view);
                 }

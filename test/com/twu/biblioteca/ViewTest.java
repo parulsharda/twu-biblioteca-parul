@@ -70,7 +70,7 @@ public class ViewTest {
         view.displayMenu();
 
         Assert.assertEquals("\n\nEnter your choice from the Menu:\n1. List Books\n" +
-                "2. Quit\n3. Check Out\n4. Return Book\n", outContent.toString());
+                "2. Quit\n3. Check Out\n4. Return Book\n5. List CheckedOut Book\n", outContent.toString());
     }
 
 

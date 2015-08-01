@@ -4,17 +4,16 @@ import java.util.ArrayList;
 
 public class ListOfBooks implements OperationOnLibrarry {
     private View view;
-    private ArrayList<Book> library;
+    private ArrayList<Book> books;
 
     public ListOfBooks(View view, ArrayList<Book> library) {
         this.view = view;
-        this.library = library;
+        this.books = library;
     }
 
     @Override
     public void execute() {
-
-        view.showDetailsOfBook(library);
+        view.showDetailsOfBook(books);
     }
 }
 

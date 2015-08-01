@@ -33,5 +33,10 @@ public class Library {
         }
         return false;
     }
+
+
+    public ArrayList<Book> ListCheckedOutBooks() {
+       return checkoutList;
+    }
 }
 

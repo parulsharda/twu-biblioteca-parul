@@ -19,11 +19,6 @@ public class View {
 
     public void showDetailsOfBook(ArrayList<Book> collection) {
         System.out.format("%-25s%25s%25s\n","Name","Author","Years");
-       /* for (int i = 0; i < collection.size(); i++) {
-            ArrayList<Book> currentList = collection.get(i);
-            System.out.format("%-25s%25s%25s",currentList.get(0),currentList.get(1),currentList.get(2));
-            System.out.print("\n");
-        }*/
         for (Book book : collection) {
             System.out.println(book);
         }
@@ -37,7 +32,7 @@ public class View {
 
     public void displayMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.println("1. List Books\n2. Quit\n3. Check Out\n4. Return Book");
+        System.out.println("1. List Books\n2. Quit\n3. Check Out\n4. Return Book\n5. List CheckedOut Book");
     }
 
 
