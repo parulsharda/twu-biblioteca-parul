@@ -1,9 +1,9 @@
 package com.twu.biblioteca;
-//name, year, director and movie rating
-public class Movie {
+
+public class Movie implements LibraryItem{
     String moviename;
-    String year;
     String director;
+    String year;
     String rating;
 
     public Movie(String moviename, String director, String year, String rating) {
@@ -13,7 +13,16 @@ public class Movie {
         this.rating = rating;
     }
 
+    @Override
     public boolean hasTitle(String searchTitle) {
         return searchTitle.equals(moviename);
     }
+
+    @Override
+    public  String toString()
+    {
+        return moviename + "\t\t\t\t" + director + "\t\t\t\t\t" + year + "\t\t\t\t" + rating ;
+    }
 }
+
+

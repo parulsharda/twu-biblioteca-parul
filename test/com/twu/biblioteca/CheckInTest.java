@@ -18,7 +18,7 @@ public class CheckInTest {
         Book book2 = new Book("Gone With the Wind", "Margaret Mitchell", "1936");
         collection.add(book1);
         collection.add(book2);
-        CheckIn checkIn = new CheckIn(view, collection, library);
+        CheckIn checkIn = new CheckIn(view, library);
         Mockito.when(view.acceptInput()).thenReturn("Game of Thrones");
     }
 
@@ -32,7 +32,7 @@ public class CheckInTest {
         Book book2 = new Book("Gone With the Wind", "Margaret Mitchell", "1936");
         collection.add(book1);
         collection.add(book2);
-        CheckIn checkIn= new CheckIn(view, collection, library);
+        CheckIn checkIn= new CheckIn(view, library);
         Mockito.when(view.acceptInput()).thenReturn("Game of Thrones");
     }
 
@@ -46,7 +46,7 @@ public class CheckInTest {
         Book book2 = new Book("Gone With the Wind", "Margaret Mitchell", "1936");
         collection.add(book1);
         collection.add(book2);
-        CheckIn checkIn = new CheckIn(view, collection, library);
+        CheckIn checkIn = new CheckIn(view, library);
         Mockito.when(view.acceptInput()).thenReturn("Game of Thrones");
         Mockito.when(library.checkIn(anyString())).thenReturn(true);
         checkIn.execute();

@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 
 public class View {
+    
 
     public void welcome() {
         System.out.println("Welcome to Biblioteca");
@@ -17,10 +18,19 @@ public class View {
     }
 
 
-    public void showDetailsOfBook(ArrayList<Book> collection) {
-        System.out.format("%-25s%25s%25s\n","Name","Author","Years");
-        for (Book book : collection) {
+    public void showDetailsOfBook(Library collection) {
+        ArrayList<LibraryItem> coll = collection.ListAvailableBooks();
+        System.out.format("%-25s%25s%25s\n", "Name", "Author", "Years");
+        for (LibraryItem book : coll) {
             System.out.println(book);
+        }
+    }
+
+    public void showDetailsOfMovie(Library movies) {
+        ArrayList<LibraryItem> coll = movies.ListAvailableBooks();
+        System.out.format("%-25s%25s%25s%25s\n", "Name", "Director", "Years", "Rating");
+        for (LibraryItem movie : coll) {
+            System.out.println(movie);
         }
     }
 
@@ -32,7 +42,7 @@ public class View {
 
     public void displayMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.println("1. List Books\n2. Quit\n3. Check Out\n4. Return Book\n5. List CheckedOut Book");
+        System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List CheckedOut Book\n6. List Movies\n7. CheckOut Movie\n8. Return Movie\n9. List CheckedOut Movie");
     }
 
 
@@ -56,5 +66,6 @@ public class View {
     public void noSuccessReturnMsg() {
         System.out.println("That is not a valid book to return");
     }
+
 }
 

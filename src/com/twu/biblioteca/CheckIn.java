@@ -1,23 +1,20 @@
 package com.twu.biblioteca;
 
-import java.util.ArrayList;
 
 public class CheckIn implements OperationOnLibrarry {
     private View view;
-    private ArrayList<Book> collection;
-    private Library library;
+    private Library books;
 
-    public CheckIn(View view, ArrayList<Book> collection, Library library) {
+    public CheckIn(View view, Library books) {
         this.view = view;
-        this.collection = collection;
-        this.library = library;
+        this.books = books;
     }
 
 
     @Override
     public void execute() {
         String requestedBook = view.acceptInput();
-        if (library.checkIn(requestedBook)) {
+        if (books.checkIn(requestedBook)) {
             view.successReturnMsg();
         }
         else {
