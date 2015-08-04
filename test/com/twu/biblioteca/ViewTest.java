@@ -5,7 +5,9 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 
@@ -17,11 +19,14 @@ public class ViewTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     PrintStream original;
 
+
     @Before
     public void setUpStreams() {
         original = System.out;
         System.setOut(new PrintStream(outContent));
     }
+
+
 
     @Test
     public void checkTheWelcomeMessage() {
@@ -29,6 +34,8 @@ public class ViewTest {
         welcomeScreen.welcome();
         assertEquals("Welcome to Biblioteca\n", outContent.toString());
     }
+
+
 
     @Test
     public void checkTheBooksListMessage() {

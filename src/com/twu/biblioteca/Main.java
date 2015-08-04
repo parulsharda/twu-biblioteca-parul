@@ -23,11 +23,18 @@ public class Main {
         movieCollection.add(movie1);
         movieCollection.add(movie2);
 
+        ArrayList<Users> users = new ArrayList<Users>();
+
+        Users user1 = new Users("Parul","nancy","Admin");
+        Users user2  = new Users("Nancy","parul", "User");
+
         Library booklibrary = new Library(bookCollection, checkedBookCollection);
         Library movielibrary = new Library(movieCollection, checkedMovieCollection);
 
         Parser parser = new Parser(view, booklibrary, movielibrary);
-        BibliotecaApp application = new BibliotecaApp(view, parser);
+        LoginView loginView = new LoginView(view);
+
+        BibliotecaApp application = new BibliotecaApp(view, parser,loginView);
 
         application.start();
     }
