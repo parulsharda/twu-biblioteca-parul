@@ -11,4 +11,8 @@ public class Users {
         this.password = password;
         this.role = role;
     }
+
+    public boolean isAdmin() {
+        return true;
+    }
 }
