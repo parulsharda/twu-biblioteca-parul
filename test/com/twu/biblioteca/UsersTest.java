@@ -8,7 +8,7 @@ import static junit.framework.TestCase.assertEquals;
 public class UsersTest {
 
     @Test
-    public void checkValidityOfUser()
+    public void checkRoleOfUser()
     {
         Users users = new Users("Parul","nancy","Admin");
 

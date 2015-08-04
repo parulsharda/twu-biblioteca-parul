@@ -13,6 +13,11 @@ public class Users {
     }
 
     public boolean isAdmin() {
-        return true;
-    }
+        if(role.equals("Admin")) {
+            return true;
+        }
+        else
+            return false;
+        }
 }
+

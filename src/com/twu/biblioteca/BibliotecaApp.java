@@ -6,16 +6,19 @@ public class BibliotecaApp {
     private View view;
     private Parser parser;
     private LoginView loginView;
+    private MenuView menuView;
 
-    public BibliotecaApp(View view, Parser parser, LoginView loginView) {
+    public BibliotecaApp(View view, Parser parser, LoginView loginView, MenuView menuView) {
         this.view = view;
         this.parser = parser;
         this.loginView = loginView;
+        this.menuView = menuView;
     }
 
     public void start() {
-        loginView.getLoginDetails(view);
         view.welcome();
+        menuView.displayMenu(view);
+        loginView.getLoginDetails(view);
         while (true) {
             view.displayMenu();
             String userInput = view.acceptInput();

@@ -24,7 +24,6 @@ public class Main {
         movieCollection.add(movie2);
 
         ArrayList<Users> users = new ArrayList<Users>();
-
         Users user1 = new Users("Parul","nancy","Admin");
         Users user2  = new Users("Nancy","parul", "User");
 
@@ -33,8 +32,9 @@ public class Main {
 
         Parser parser = new Parser(view, booklibrary, movielibrary);
         LoginView loginView = new LoginView(view);
+        MenuView menuView = new MenuView(view);
 
-        BibliotecaApp application = new BibliotecaApp(view, parser,loginView);
+        BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView);
 
         application.start();
     }
