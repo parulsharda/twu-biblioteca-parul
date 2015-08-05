@@ -49,7 +49,7 @@ public class BibliotecaApp {
                 if(userInput.equals("10")) {
                     break;
                 }
-                if(userInput.equals("5") || userInput.equals("9") && role.equals("Admin")) {
+                if(!(userInput.equals("5") || userInput.equals("9") && role.equals("Users"))) {
                     OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput, users);
                     libraryOperation.execute();
                 }
