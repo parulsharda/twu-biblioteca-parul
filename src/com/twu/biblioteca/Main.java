@@ -24,8 +24,8 @@ public class Main {
         movieCollection.add(movie2);
 
         ArrayList<Users> users = new ArrayList<Users>();
-        Users user1 = new Users("Parul","nancy","Admin");
-        Users user2  = new Users("Nancy","parul", "User");
+        Users user1 = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
+        Users user2  = new Users("111-1919","parul", "User","parulsharma@gmail.com","989796959");
         users.add(user1);
         users.add(user2);
 

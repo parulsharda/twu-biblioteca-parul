@@ -17,7 +17,7 @@ public class LoginViewTest {
 
 
         ArrayList<Users> arrusers = new ArrayList<Users>();
-        Users users = new Users("Parul","nancy","Admin");
+        Users users = new Users("Parul","nancy","Admin","nancysharma@gmail.com","9890976754");
 
         AuthenticateLogin authenticateLogin = new AuthenticateLogin(arrusers);
         View view = mock(View.class);

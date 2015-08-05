@@ -10,7 +10,7 @@ public class UsersTest {
     @Test
     public void checkRoleOfUser()
     {
-        Users users = new Users("Parul","nancy","Admin");
+        Users users = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
 
         boolean actualuser = users.isAdmin("Admin");
 

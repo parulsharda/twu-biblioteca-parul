@@ -13,7 +13,7 @@ public class CheckOutTest {
     public void checkIfViewMethodIsCalled() {
         View view = Mockito.mock(View.class);
         Library library = Mockito.mock(Library.class);
-        Users users = new Users("Parul","nancy","Admin");
+        Users users = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
 
         ArrayList<Book> collection = new ArrayList<Book>();
         Book book1 = new Book("Game of Thrones", "George R. R. Martin", "1996");
@@ -29,7 +29,7 @@ public class CheckOutTest {
     public void checkViewInput() {
         View view = Mockito.mock(View.class);
         Library library = Mockito.mock(Library.class);
-        Users users = new Users("Parul","nancy","Admin");
+        Users users = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
 
         ArrayList<Book> collection = new ArrayList<Book>();
         Book book1 = new Book("Game Of Thrones", "George R. R. Martin", "1996");

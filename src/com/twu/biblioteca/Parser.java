@@ -9,13 +9,6 @@ public class Parser {
             private Library bookCollection;
             private Library movieCollection;
 
-           /* private ArrayList<Movie> movie;
-            private ArrayList<Book> book;
-            private ArrayList<Book> checkedbook;
-            private ArrayList<Movie> checkedmovie;
-            private Library booklibrary;
-            private Library movielibrary;*/
-
 
             public Parser(View view, Library bookCollection, Library movieCollection) {
                 this.view = view;
@@ -52,6 +45,9 @@ public class Parser {
                 }
                 else if(userInput.equals("9")) {
                     operationOnLibrarry = new ListOfCheckedOutBook(view, movieCollection,users);
+                }
+                else if(userInput.equals("11")) {
+                    operationOnLibrarry = new Profile(users);
                 }
                 else {
                     operationOnLibrarry = new InvalidOption(view);
