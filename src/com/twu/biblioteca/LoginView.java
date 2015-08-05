@@ -12,7 +12,7 @@ public class LoginView {
         this.authenticator = authenticator;
     }
 
-    public String getLoginDetails(View view,Users users,AuthenticateLogin authenticator) {
+    public String getLoginDetails(View view,AuthenticateLogin authenticator) {
 
         view.show("Enter the User Name");
         String name = view.acceptInput();
@@ -22,14 +22,6 @@ public class LoginView {
         String role = authenticator.check(name,password);
 
         return  role;
-      /*  if(role.equals("Not valid User"))
-            System.out.print("Not a valid user\n");
-        else {
-            if (!users.isAdmin(role)) {
-                view.displayUserMenu();
-            } else {
-                view.displayMenu();
-            }
-        }*/
+
     }
 }

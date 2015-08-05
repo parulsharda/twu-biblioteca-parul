@@ -23,7 +23,7 @@ public class LoginViewTest {
         View view = mock(View.class);
         LoginView loginView = new LoginView(view,users,authenticateLogin);
 
-        loginView.getLoginDetails(view,users,authenticateLogin);
+        loginView.getLoginDetails(view,authenticateLogin);
 
         verify(view).show("Enter the User Name");
         verify(view).show("Enter the Password");

@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+
 public class BibliotecaApp {
 
     private View view;
@@ -25,7 +27,9 @@ public class BibliotecaApp {
             if(status == false) {
                 break;
             }
-            String role = loginView.getLoginDetails(view, users, authenticateLogin);
+
+            String role = loginView.getLoginDetails(view, authenticateLogin);
+
             while (true) {
                 if(role.equals("Not valid User")) {
                     System.out.print("Not a valid user\n");
@@ -39,8 +43,9 @@ public class BibliotecaApp {
                         view.displayMenu();
                     }
                     }
+
                 String userInput = view.acceptInput();
-                OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput);
+                OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput,users);
                 libraryOperation.execute();
             }
         }

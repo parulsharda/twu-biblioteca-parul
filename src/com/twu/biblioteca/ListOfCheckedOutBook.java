@@ -15,6 +15,6 @@ public class ListOfCheckedOutBook implements OperationOnLibrarry {
 
     @Override
     public void execute() {
-        view.showDetailsOfBookCheckedOutBook(library.ListCheckedOutBooks());
+        library.ListCheckedBookDetails();
     }
 }

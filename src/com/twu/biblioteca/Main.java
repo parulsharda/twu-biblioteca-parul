@@ -34,7 +34,7 @@ public class Main {
         Library movielibrary = new Library(movieCollection, checkedMovieCollection);
 
         AuthenticateLogin authenticateLogin = new AuthenticateLogin(users);
-        Parser parser = new Parser(view, booklibrary, movielibrary,users);
+        Parser parser = new Parser(view, booklibrary, movielibrary);
         LoginView loginView = new LoginView(view,user1,authenticateLogin);
         MenuView menuView = new MenuView(view);
 

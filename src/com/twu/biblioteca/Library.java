@@ -1,12 +1,14 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
 
 public class Library {
 
     ArrayList<LibraryItem> availableCollection;
     ArrayList<LibraryItem> checkedoutCollection;
-
+    HashMap<LibraryItem, Users> hashMap = new HashMap<LibraryItem, Users>();
 
 
     public Library(ArrayList<LibraryItem> availableLibraryItems, ArrayList<LibraryItem> checkedOutLibraryItems) {
@@ -15,11 +17,12 @@ public class Library {
     }
 
 
-    public boolean checkout(String bookToBeCheckedOut) {
+    public boolean checkout(String bookToBeCheckedOut, Users users) {
         for (LibraryItem book : availableCollection) {
             if (book.hasTitle(bookToBeCheckedOut)) {
                 availableCollection.remove(book);
                 checkedoutCollection.add(book);
+                hashMap.put(book, users);
                 return true;
             }
         }
@@ -31,11 +34,24 @@ public class Library {
             if (book.hasTitle(bookToBeReturned)) {
                 checkedoutCollection.remove(book);
                 availableCollection.add(book);
+                hashMap.remove(book);
                 return true;
             }
         }
         return false;
     }
+
+
+
+    public void ListCheckedBookDetails() {
+        for(LibraryItem item : checkedoutCollection) {
+            String details = item.toString();
+            details += " " + hashMap.get(item);
+            System.out.print(details);
+        }
+    }
+
+
 
 
     public ArrayList<LibraryItem> ListCheckedOutBooks() {

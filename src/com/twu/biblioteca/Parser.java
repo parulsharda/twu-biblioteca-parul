@@ -1,5 +1,6 @@
 package com.twu.biblioteca;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.ArrayList;
 
 public class Parser {
@@ -7,7 +8,7 @@ public class Parser {
             private View view;
             private Library bookCollection;
             private Library movieCollection;
-            private Users users;
+
            /* private ArrayList<Movie> movie;
             private ArrayList<Book> book;
             private ArrayList<Book> checkedbook;
@@ -16,40 +17,40 @@ public class Parser {
             private Library movielibrary;*/
 
 
-            public Parser(View view, Library bookCollection, Library movieCollection, ArrayList<Users> users) {
+            public Parser(View view, Library bookCollection, Library movieCollection) {
                 this.view = view;
                 this.bookCollection = bookCollection;
                 this.movieCollection = movieCollection;
             }
 
-            public OperationOnLibrarry convertIntoDomain(String userInput) {
+            public OperationOnLibrarry convertIntoDomain(String userInput,Users users) {
                 OperationOnLibrarry operationOnLibrarry;
 
-                if (userInput.equals("List Books")) {
+                if (userInput.equals("1")) {
                     operationOnLibrarry = new ListOfBooks(view,bookCollection);
                 }
-                else if (userInput.equals("CheckOut Book")) {
-                    operationOnLibrarry = new CheckOut(view,bookCollection);
+                else if (userInput.equals("3")) {
+                    operationOnLibrarry = new CheckOut(view,bookCollection,users);
                 }
-                else if (userInput.equals("Return Book")) {
+                else if (userInput.equals("4")) {
                     operationOnLibrarry = new CheckIn(view,bookCollection);
                 }
-                else if (userInput.equals("Quit")) {
+                else if (userInput.equals("2")) {
                     operationOnLibrarry = new Quit();
                 }
-                else if(userInput.equals("List CheckedOut Book")) {
+                else if(userInput.equals("5")) {
                     operationOnLibrarry = new ListOfCheckedOutBook(view,bookCollection,users);
                 }
-                else if(userInput.equals("List Movies")) {
+                else if(userInput.equals("6")) {
                     operationOnLibrarry = new ListOfMovies(view,movieCollection);
                 }
-                else if(userInput.equals("CheckOut Movie")) {
-                    operationOnLibrarry = new CheckOut(view,movieCollection);
+                else if(userInput.equals("7")) {
+                    operationOnLibrarry = new CheckOut(view,movieCollection,users);
                 }
-                else if(userInput.equals("Return Movie")) {
+                else if(userInput.equals("8")) {
                     operationOnLibrarry = new CheckIn(view,movieCollection);
                 }
-                else if(userInput.equals("List CheckedOut Movie")) {
+                else if(userInput.equals("9")) {
                     operationOnLibrarry = new ListOfCheckedOutBook(view, movieCollection,users);
                 }
                 else {

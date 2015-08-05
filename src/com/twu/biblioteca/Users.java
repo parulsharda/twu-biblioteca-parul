@@ -12,8 +12,14 @@ public class Users {
         this.role = role;
     }
 
+    @Override
+    public  String toString()
+    {
+        return username;
+    }
+
     public boolean isAdmin(String roleOfUser) {
-        if(roleOfUser.equals("Admin")) {
+        if(roleOfUser.equals(role)) {
             return true;
         }
         else
