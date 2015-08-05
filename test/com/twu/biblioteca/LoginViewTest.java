@@ -1,11 +1,9 @@
 package com.twu.biblioteca;
-
-import com.twu.biblioteca.LoginView;
-import com.twu.biblioteca.View;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
@@ -17,10 +15,15 @@ public class LoginViewTest {
     public void toGetTheUserIdAndPassword(){
         System.setOut(new PrintStream(outContent));
 
-        View view = mock(View.class);
-        LoginView loginView = new LoginView(view);
 
-        loginView.getLoginDetails(view);
+        ArrayList<Users> arrusers = new ArrayList<Users>();
+        Users users = new Users("Parul","nancy","Admin");
+
+        AuthenticateLogin authenticateLogin = new AuthenticateLogin(arrusers);
+        View view = mock(View.class);
+        LoginView loginView = new LoginView(view,users,authenticateLogin);
+
+        loginView.getLoginDetails(view,users,authenticateLogin);
 
         verify(view).show("Enter the User Name");
         verify(view).show("Enter the Password");

@@ -45,6 +45,12 @@ public class View {
         return sc.nextLine();
     }
 
+
+    public void displayUserMenu() {
+        System.out.println("\n\nEnter your choice from the Menu:");
+        System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List Movies\n6. CheckOut Movie\n7. Return Movie\n");
+    }
+
     public void displayMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
         System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List CheckedOut Book\n6. List Movies\n7. CheckOut Movie\n8. Return Movie\n9. List CheckedOut Movie");
@@ -72,5 +78,11 @@ public class View {
         System.out.println("That is not a valid book to return");
     }
 
+    public void showDetailsOfBookCheckedOutBook(ArrayList<LibraryItem> libraryItems) {
+        System.out.format("%-25s%25s%25s\n", "Name", "Author", "Years");
+        for (LibraryItem book : libraryItems) {
+            System.out.println(book);
+        }
+    }
 }
 

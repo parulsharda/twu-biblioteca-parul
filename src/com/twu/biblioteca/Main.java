@@ -26,15 +26,19 @@ public class Main {
         ArrayList<Users> users = new ArrayList<Users>();
         Users user1 = new Users("Parul","nancy","Admin");
         Users user2  = new Users("Nancy","parul", "User");
+        users.add(user1);
+        users.add(user2);
+
 
         Library booklibrary = new Library(bookCollection, checkedBookCollection);
         Library movielibrary = new Library(movieCollection, checkedMovieCollection);
 
-        Parser parser = new Parser(view, booklibrary, movielibrary);
-        LoginView loginView = new LoginView(view);
+        AuthenticateLogin authenticateLogin = new AuthenticateLogin(users);
+        Parser parser = new Parser(view, booklibrary, movielibrary,users);
+        LoginView loginView = new LoginView(view,user1,authenticateLogin);
         MenuView menuView = new MenuView(view);
 
-        BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView);
+        BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView,user1,authenticateLogin);
 
         application.start();
     }

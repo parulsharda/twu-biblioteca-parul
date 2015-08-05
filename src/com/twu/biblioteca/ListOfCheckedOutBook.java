@@ -4,15 +4,17 @@ import java.util.ArrayList;
 
 public class ListOfCheckedOutBook implements OperationOnLibrarry {
     View view;
-    Library books;
+    Library library;
+    Users users;
 
-    public ListOfCheckedOutBook(View view, Library books) {
+    public ListOfCheckedOutBook(View view, Library library, Users users) {
         this.view = view;
-        this.books = books;
+        this.library = library;
+        this.users = users;
     }
 
     @Override
     public void execute() {
-        view.showDetailsOfBook(books);
+        view.showDetailsOfBookCheckedOutBook(library.ListCheckedOutBooks());
     }
 }

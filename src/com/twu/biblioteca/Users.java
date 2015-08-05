@@ -12,8 +12,8 @@ public class Users {
         this.role = role;
     }
 
-    public boolean isAdmin() {
-        if(role.equals("Admin")) {
+    public boolean isAdmin(String roleOfUser) {
+        if(roleOfUser.equals("Admin")) {
             return true;
         }
         else

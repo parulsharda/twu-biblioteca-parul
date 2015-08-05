@@ -26,6 +26,10 @@
             <test name="com.twu.biblioteca.CheckInTest" haltonfailure="true" haltonerror="true"/>
             <test name="com.twu.biblioteca.InvalidOptionTest" haltonfailure="true" haltonerror="true"/>
             <test name="com.twu.biblioteca.ListOfBooksTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.ListOfMoviesTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.UsersTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.MenuViewTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.LoginViewTest" haltonfailure="true" haltonerror="true"/>
         </junit>
     </target>
 

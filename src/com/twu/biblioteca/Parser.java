@@ -7,6 +7,7 @@ public class Parser {
             private View view;
             private Library bookCollection;
             private Library movieCollection;
+            private Users users;
            /* private ArrayList<Movie> movie;
             private ArrayList<Book> book;
             private ArrayList<Book> checkedbook;
@@ -15,7 +16,7 @@ public class Parser {
             private Library movielibrary;*/
 
 
-            public Parser(View view,Library bookCollection,Library movieCollection ) {
+            public Parser(View view, Library bookCollection, Library movieCollection, ArrayList<Users> users) {
                 this.view = view;
                 this.bookCollection = bookCollection;
                 this.movieCollection = movieCollection;
@@ -37,7 +38,7 @@ public class Parser {
                     operationOnLibrarry = new Quit();
                 }
                 else if(userInput.equals("List CheckedOut Book")) {
-                    operationOnLibrarry = new ListOfCheckedOutBook(view,bookCollection);
+                    operationOnLibrarry = new ListOfCheckedOutBook(view,bookCollection,users);
                 }
                 else if(userInput.equals("List Movies")) {
                     operationOnLibrarry = new ListOfMovies(view,movieCollection);
@@ -49,7 +50,7 @@ public class Parser {
                     operationOnLibrarry = new CheckIn(view,movieCollection);
                 }
                 else if(userInput.equals("List CheckedOut Movie")) {
-                    operationOnLibrarry = new ListOfCheckedOutBook(view, movieCollection);
+                    operationOnLibrarry = new ListOfCheckedOutBook(view, movieCollection,users);
                 }
                 else {
                     operationOnLibrarry = new InvalidOption(view);
