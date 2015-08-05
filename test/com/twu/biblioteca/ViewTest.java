@@ -64,7 +64,7 @@ public class ViewTest {
         view.displayMenu();
 
         Assert.assertEquals("\n\nEnter your choice from the Menu:\n1. List Books\n" +
-                "2. Quit\n3. CheckOut Book\n4. Return Book\n5. List CheckedOut Book\n6. List Movies\n7. CheckOut Movie\n8. Return Movie\n9. List CheckedOut Movie\n", outContent.toString());
+                "2. Quit\n3. CheckOut Book\n4. Return Book\n5. List CheckedOut Book\n6. List Movies\n7. CheckOut Movie\n8. Return Movie\n9. List CheckedOut Movie\n10. LogOut\n11. Profile\n", outContent.toString());
     }
 
 

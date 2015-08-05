@@ -22,6 +22,7 @@ public class BibliotecaApp {
 
     public void start() {
         view.welcome();
+
         while(true) {
             boolean status = menuView.displayMenu(view);
             if(status == false) {
@@ -45,9 +46,14 @@ public class BibliotecaApp {
                     }
 
                 String userInput = view.acceptInput();
-                OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput,users);
-                libraryOperation.execute();
-            }
+                if(userInput.equals("10")) {
+                    break;
+                }
+                if(userInput.equals("5") || userInput.equals("9") && role.equals("Admin")) {
+                    OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput, users);
+                    libraryOperation.execute();
+                }
+                }
         }
     }
 }

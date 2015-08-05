@@ -48,12 +48,12 @@ public class View {
 
     public void displayUserMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List Movies\n6. CheckOut Movie\n7. Return Movie\n");
+        System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List Movies\n6. CheckOut Movie\n7. Return Movie\n8. LogOut\n9. Profile");
     }
 
     public void displayMenu() {
         System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List CheckedOut Book\n6. List Movies\n7. CheckOut Movie\n8. Return Movie\n9. List CheckedOut Movie");
+        System.out.println("1. List Books\n2. Quit\n3. CheckOut Book\n4. Return Book\n5. List CheckedOut Book\n6. List Movies\n7. CheckOut Movie\n8. Return Movie\n9. List CheckedOut Movie\n10. LogOut\n11. Profile");
     }
 
 
