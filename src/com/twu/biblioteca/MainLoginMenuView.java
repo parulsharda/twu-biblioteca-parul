@@ -8,9 +8,9 @@ public class MainLoginMenuView implements ViewInterface{
     ViewParser viewParser;
 
 
-    public MainLoginMenuView(ViewInterface quitView, ViewInterface displayMenuView, ViewInterface invalidMenuView,Scanner scanner,ViewParser viewParser) {
+    public MainLoginMenuView(ViewInterface quitView, ViewInterface loginOptionView, ViewInterface invalidMenuView,Scanner scanner,ViewParser viewParser) {
         this.quitView = quitView;
-        this.loginOptionView = displayMenuView;
+        this.loginOptionView = loginOptionView;
         this.invalidMenuView = invalidMenuView;
         this.scanner = scanner;
         this.viewParser = viewParser;
