@@ -34,6 +34,7 @@ public class Library {
             if (book.hasTitle(bookToBeReturned)) {
                 checkedoutCollection.remove(book);
                 availableCollection.add(book);
+                //if(users.username.equals())
                 hashMap.remove(book);
                 return true;
             }

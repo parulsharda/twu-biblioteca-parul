@@ -16,7 +16,7 @@ public class WelcomeView implements ViewInterface {
     }
 
     @Override
-    public ViewInterface proceed() {
+    public ViewInterface proceed(ViewInterface view) {
         return mainLoginMenuView;
     }
 

@@ -7,7 +7,8 @@ public class QuitView implements ViewInterface {
     }
 
     @Override
-    public ViewInterface proceed() {
+    public ViewInterface proceed(ViewInterface view)
+    {
         return null;
     }
 }

@@ -80,12 +80,5 @@ public class View {
     public void noSuccessReturnMsg() {
         System.out.println("That is not a valid book to return");
     }
-
-    /*public void showDetailsOfBookCheckedOutBook(void libraryItems) {
-        System.out.format("%-25s%25s%25s\n", "Name", "Author", "Years");
-        for (LibraryItem book : libraryItems) {
-            System.out.println(book);
-        }
-    }*/
 }
 

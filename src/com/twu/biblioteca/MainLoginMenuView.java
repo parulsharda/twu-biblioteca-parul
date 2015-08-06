@@ -22,7 +22,7 @@ public class MainLoginMenuView implements ViewInterface{
     }
 
     @Override
-    public ViewInterface proceed() {
+    public ViewInterface proceed(ViewInterface view) {
         return viewParser.giveNextViewToBeRendered(scanner.acceptInput());
     }
 }
