@@ -4,9 +4,9 @@ import org.junit.After;
 
 public class WelcomeView implements ViewInterface {
 
-    LoginView loginView;
+    ViewInterface loginView;
 
-    public WelcomeView(LoginView loginView) {
+    public WelcomeView(ViewInterface loginView) {
      this.loginView = loginView;
     }
 
@@ -18,7 +18,7 @@ public class WelcomeView implements ViewInterface {
 
     @Override
     public ViewInterface proceed() {
-        return null;
+        return loginView;
     }
 
 }

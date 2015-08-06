@@ -2,6 +2,7 @@ import com.twu.biblioteca.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mockito;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -26,14 +27,19 @@ public class WelcomeViewTest {
 
     @Test
     public void checkTheWelcomeMessage() {
-        View view = new View();
-        Users users = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
-        AuthenticateLogin authenticator = new AuthenticateLogin(new ArrayList<Users>());
-        LoginView loginView = new LoginView(view,users,authenticator);
-        WelcomeView welcomeView = new WelcomeView(loginView);
+        ViewInterface mainLoginView = Mockito.mock(MainLoginView.class);
+        WelcomeView welcomeView = new WelcomeView(mainLoginView);
         welcomeView.draw();
         assertEquals("Welcome to Biblioteca\n", outContent.toString());
     }
+
+    @Test
+    public void shouldproceedToNextView() {
+        ViewInterface mainLoginView = Mockito.mock(MainLoginView.class);
+        WelcomeView welcomeView = new WelcomeView(mainLoginView);
+        assertEquals(mainLoginView, welcomeView.proceed());
+    }
+
 
     @After
     public void cleanUpStreams() {
