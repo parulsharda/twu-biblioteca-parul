@@ -8,11 +8,14 @@ public class View {
 
 
     public void welcome() {
+
         System.out.println("Welcome to Biblioteca");
     }
 
+
     public void show(String msg)
     {
+
         System.out.println(msg);
     }
 

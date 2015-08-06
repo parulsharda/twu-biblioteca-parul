@@ -40,6 +40,8 @@ public class Main {
 
         BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView,user1,authenticateLogin);
 
+        WelcomeView welcomeView = new WelcomeView(loginView);
+
         application.start();
     }
 }
