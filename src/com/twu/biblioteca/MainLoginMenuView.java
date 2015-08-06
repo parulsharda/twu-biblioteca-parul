@@ -23,7 +23,6 @@ public class MainLoginMenuView implements ViewInterface{
 
     @Override
     public ViewInterface proceed() {
-        viewParser.giveNextViewToBeRendered(scanner.acceptInput());
-        return null;
+        return viewParser.giveNextViewToBeRendered(scanner.acceptInput());
     }
 }

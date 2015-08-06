@@ -38,19 +38,18 @@ public class MainLoginMenuViewTest {
     }
 
     @Test
-    public void shouldproceedToNextViewLoginOptionViewIfInputIsLogin() {
-       // ViewInterface mainLoginMenuView = Mockito.mock(MainLoginMenuView.class);
-       // ViewInterface  welcomeView = Mockito.mock(WelcomeView.class);
+    public void shouldProceedToNextViewLoginOptionViewIfInputIsLogin() {
         ViewInterface loginOptionView = Mockito.mock(LoginOptionView.class);
         ViewInterface quitView = Mockito.mock(QuitView.class);
         ViewInterface invalidMenuView = Mockito.mock(InvalidMenuView.class);
         Scanner scanner = Mockito.mock(Scanner.class);
-        ViewParser viewParser = Mockito.mock(ViewParser.class);
+
+        ViewParser viewParser = new ViewParser(loginOptionView,quitView,invalidMenuView);
 
         MainLoginMenuView mainLoginMenuView1 = new MainLoginMenuView(quitView,loginOptionView,invalidMenuView,scanner,viewParser);
 
-        ViewInterface expected = viewParser.giveNextViewToBeRendered("Login");
-        assertEquals(loginOptionView, expected);
+        Mockito.when(scanner.acceptInput()).thenReturn("Login");
+        assertEquals(loginOptionView, mainLoginMenuView1.proceed());
     }
 
     @After
