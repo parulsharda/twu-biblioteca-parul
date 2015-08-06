@@ -19,4 +19,18 @@ public class ViewParserTest {
         assertEquals(loginOptionView,viewParser.giveNextViewToBeRendered("Login"));
 
     }
+
+
+    @Test
+    public void  viewParserShouldReturnTheObjectOfQuitViewClass() {
+
+        ViewInterface loginOptionView = Mockito.mock(LoginOptionView.class);
+        ViewInterface quitView = Mockito.mock(QuitView.class);
+        ViewInterface invalidMenuView = Mockito.mock(InvalidMenuView.class);
+
+        ViewParser viewParser = new ViewParser(loginOptionView,quitView,invalidMenuView);
+
+        assertEquals(quitView,viewParser.giveNextViewToBeRendered("Quit"));
+
+    }
 }

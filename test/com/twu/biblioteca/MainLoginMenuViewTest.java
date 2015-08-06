@@ -10,7 +10,7 @@ import java.io.PrintStream;
 
 import static junit.framework.TestCase.assertEquals;
 
-public class MainLoginViewTest {
+public class MainLoginMenuViewTest {
 
 
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
