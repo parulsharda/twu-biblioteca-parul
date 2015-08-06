@@ -1,13 +1,12 @@
 package com.twu.biblioteca;
 
-import org.junit.After;
 
 public class WelcomeView implements ViewInterface {
 
-    ViewInterface loginView;
+    ViewInterface mainLoginMenuView;
 
-    public WelcomeView(ViewInterface loginView) {
-     this.loginView = loginView;
+    public WelcomeView(ViewInterface mainLoginMenuView) {
+     this.mainLoginMenuView = mainLoginMenuView;
     }
 
     @Override
@@ -18,7 +17,7 @@ public class WelcomeView implements ViewInterface {
 
     @Override
     public ViewInterface proceed() {
-        return loginView;
+        return mainLoginMenuView;
     }
 
 }
