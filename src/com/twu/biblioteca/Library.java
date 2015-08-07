@@ -8,6 +8,7 @@ public class Library {
 
     ArrayList<LibraryItem> availableCollection;
     ArrayList<LibraryItem> checkedoutCollection;
+    ArrayList<Users> userarr;
     HashMap<LibraryItem, Users> hashMap = new HashMap<LibraryItem, Users>();
 
 
@@ -34,7 +35,7 @@ public class Library {
             if (book.hasTitle(bookToBeReturned)) {
                 checkedoutCollection.remove(book);
                 availableCollection.add(book);
-                //if(users.username.equals())
+                //if(userarr.get(0).username.equals(users.username))
                 hashMap.remove(book);
                 return true;
             }

@@ -50,7 +50,7 @@ public class MainLoginMenuViewTest {
         MainLoginMenuView mainLoginMenuView1 = new MainLoginMenuView(quitView,loginOptionView,invalidMenuView,scanner,viewParser);
         WelcomeView welcomeView = new WelcomeView(mainLoginMenuView1);
         Mockito.when(scanner.acceptInput()).thenReturn("Login");
-        assertEquals(loginOptionView, mainLoginMenuView1.proceed(welcomeView));
+        assertEquals(loginOptionView, mainLoginMenuView1.proceed());
     }
 
     @After

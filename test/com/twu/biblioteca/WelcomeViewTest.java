@@ -36,7 +36,7 @@ public class WelcomeViewTest {
     public void shouldproceedToNextView() {
         ViewInterface mainLoginMenuView = Mockito.mock(MainLoginMenuView.class);
         WelcomeView welcomeView = new WelcomeView(mainLoginMenuView);
-        assertEquals(mainLoginMenuView, welcomeView.proceed(welcomeView));
+        assertEquals(mainLoginMenuView, welcomeView.proceed());
     }
 
 

@@ -24,4 +24,7 @@ public class ViewParser {
         }
     }
 
+    public ViewInterface giveDisplayMenuBasedOnRole(String input) {
+        return null;
+    }
 }
