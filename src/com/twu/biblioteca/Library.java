@@ -20,6 +20,7 @@ public class Library {
 
     public boolean checkout(String bookToBeCheckedOut, Users users) {
         for (LibraryItem book : availableCollection) {
+            System.out.print("In checkin" + users + "\n");
             if (book.hasTitle(bookToBeCheckedOut)) {
                 availableCollection.remove(book);
                 checkedoutCollection.add(book);
@@ -30,12 +31,13 @@ public class Library {
         return false;
     }
 
-    public boolean checkIn(String bookToBeReturned) {
+    public boolean checkIn(String bookToBeReturned,Users users) {
         for (LibraryItem book : checkedoutCollection) {
-            if (book.hasTitle(bookToBeReturned)) {
+            System.out.print(users);
+            System.out.println(hashMap.get(book));
+            if ((book.hasTitle(bookToBeReturned)) && users == hashMap.get(book)) {
                 checkedoutCollection.remove(book);
                 availableCollection.add(book);
-                //if(userarr.get(0).username.equals(users.username))
                 hashMap.remove(book);
                 return true;
             }

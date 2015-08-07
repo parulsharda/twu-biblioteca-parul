@@ -9,13 +9,13 @@ public class AuthenticateLogin {
         this.users = users;
     }
 
-    public String check(String name, String password) {
+    public Users check(String name, String password) {
         for(Users itruser : users) {
             if (name.equals(itruser.username) && (password.equals(itruser.password))) {
-                return itruser.role;
+                return itruser;
             }
         }
-            return "Not valid User";
+            return null;
 
     }
 }

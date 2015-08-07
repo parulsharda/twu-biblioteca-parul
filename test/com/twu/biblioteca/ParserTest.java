@@ -1,11 +1,10 @@
-/*package com.twu.biblioteca;
+package com.twu.biblioteca;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.mockito.runners.MockitoJUnitRunner;
 
-import java.util.ArrayList;
 
 import static org.junit.Assert.*;
 
@@ -13,12 +12,48 @@ import static org.junit.Assert.*;
 public class ParserTest {
 
     @Test
-    public void parserKnowsHowToReturnLibraryOperation() {
+    public void parserKnowsHowToReturnLibraryOperationListBooks() {
         View view = Mockito.mock(View.class);
-        ArrayList<ArrayList<String>> library = new ArrayList<ArrayList<String>>();
-        Parser parser = new Parser(view, library);
+        Library book = Mockito.mock(Library.class);
+        Library movie = Mockito.mock(Library.class);
+        Parser parser = new Parser(view, book, movie);
+        Users users = Mockito.mock(Users.class);
 
-        OperationOnLibrarry result = parser.convertIntoDomain("List Books");
+        OperationOnLibrarry result = parser.convertIntoDomain("List Books", users);
 
-        assertEquals(ListOfBooks.class, result.getClas
-        */
+        assertEquals(ListOfBooks.class, result.getClass());
+    }
+
+
+
+    @Test
+    public void parserKnowsHowToReturnLibraryOperationCheckOutBooks() {
+        View view = Mockito.mock(View.class);
+        Library book = Mockito.mock(Library.class);
+        Library movie = Mockito.mock(Library.class);
+        Parser parser = new Parser(view, book, movie);
+        Users users = Mockito.mock(Users.class);
+
+        OperationOnLibrarry result = parser.convertIntoDomain("CheckOut Book", users);
+
+        assertEquals(CheckOut.class, result.getClass());
+    }
+
+
+
+    @Test
+    public void parserKnowsHowToReturnLibraryOperationReturnMovie() {
+        View view = Mockito.mock(View.class);
+        Library book = Mockito.mock(Library.class);
+        Library movie = Mockito.mock(Library.class);
+        Parser parser = new Parser(view, book, movie);
+        Users users = Mockito.mock(Users.class);
+
+        OperationOnLibrarry result = parser.convertIntoDomain("Return Movie", users);
+
+        assertEquals(CheckIn.class, result.getClass());
+    }
+
+}
+
+

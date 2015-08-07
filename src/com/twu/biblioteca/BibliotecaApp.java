@@ -29,15 +29,15 @@ public class BibliotecaApp {
                 break;
             }
 
-            String role = loginView.getLoginDetails(view, authenticateLogin);
 
+            users = loginView.getLoginDetails(view, authenticateLogin);
             while (true) {
-                if(role.equals("Not valid User")) {
+                if(users == null) {
                     System.out.print("Not a valid user\n");
                     break;
                 }
                 else {
-                    if (!users.isAdmin(role)) {
+                    if (!users.isAdmin()) {
                     view.displayUserMenu();
                     } else
                     {
@@ -46,13 +46,13 @@ public class BibliotecaApp {
                     }
 
                 String userInput = view.acceptInput();
-                if(userInput.equals("10")) {
+                if(userInput.equals("LogOut")) {
+                    users = null;
                     break;
                 }
-               // if(!(userInput.equals("5") || userInput.equals("9") && role.equals("Users"))) {
-                    OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput, users);
-                    libraryOperation.execute();
-              //  }
+
+                OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput, users);
+                libraryOperation.execute();
                 }
         }
     }

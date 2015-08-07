@@ -12,16 +12,14 @@ public class LoginView {
         this.authenticator = authenticator;
     }
 
-    public String getLoginDetails(View view,AuthenticateLogin authenticator) {
+    public Users getLoginDetails(View view,AuthenticateLogin authenticator) {
 
         view.show("Enter the User Name");
         String name = view.acceptInput();
         view.show("Enter the Password");
         String password = view.acceptInput();
 
-        String role = authenticator.check(name,password);
-
-        return  role;
+        return authenticator.check(name,password);
 
     }
 }

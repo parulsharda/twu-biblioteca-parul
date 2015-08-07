@@ -12,7 +12,7 @@ public class UsersTest {
     {
         Users users = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
 
-        boolean actualuser = users.isAdmin("Admin");
+        boolean actualuser = users.isAdmin();
 
         assertEquals(true,actualuser);
     }
