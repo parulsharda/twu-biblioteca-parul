@@ -18,7 +18,7 @@ public class Parser {
                 if (userInput.equals("List Books")) {
                     operationOnLibrarry = new ListOfBooks(view,bookCollection);
                 }
-                else if (userInput.equals("CheckOut Book")) {
+                else if (userInput.equals("Checkout Book")) {
                     operationOnLibrarry = new CheckOut(view,bookCollection,users);
                 }
                 else if (userInput.equals("Return Book")) {
@@ -27,19 +27,19 @@ public class Parser {
                 else if (userInput.equals("Quit")) {
                     operationOnLibrarry = new Quit();
                 }
-                else if(userInput.equals("List CheckedOut Book")) {
+                else if(userInput.equals("List Checkedout Book")) {
                     operationOnLibrarry = new ListOfCheckedOutBook(view,bookCollection,users);
                 }
                 else if(userInput.equals("List Movies")) {
                     operationOnLibrarry = new ListOfMovies(view,movieCollection);
                 }
-                else if(userInput.equals("CheckOut Movie")) {
+                else if(userInput.equals("Checkout Movie")) {
                     operationOnLibrarry = new CheckOut(view,movieCollection,users);
                 }
                 else if(userInput.equals("Return Movie")) {
                     operationOnLibrarry = new CheckIn(view,movieCollection,users);
                 }
-                else if(userInput.equals("List CheckedOut Movies")) {
+                else if(userInput.equals("List Checkedout Movie")) {
                     operationOnLibrarry = new ListOfCheckedOutBook(view, movieCollection,users);
                 }
                 else if(userInput.equals("Profile")) {

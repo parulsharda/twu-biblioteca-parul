@@ -1,9 +1,13 @@
-package com.twu.biblioteca;
+package view;
 
+import views.InvalidMenuView;
+import views.LoginOptionView;
+import com.twu.biblioteca.Scanner;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import views.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

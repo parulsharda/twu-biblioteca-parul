@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package views;
 
 public class UserDisplayMenuView implements ViewInterface {
 
@@ -12,7 +12,6 @@ public class UserDisplayMenuView implements ViewInterface {
 
     @Override
     public ViewInterface proceed() {
-
-        return null;
+        return  null;
     }
 }

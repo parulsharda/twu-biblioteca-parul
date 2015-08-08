@@ -5,7 +5,12 @@ import java.util.Scanner;
 
 
 public class View {
+    ConsoleInputOutput console;
 
+
+    public View(ConsoleInputOutput console) {
+        this.console = console;
+    }
 
     public void welcome() {
 
@@ -44,19 +49,18 @@ public class View {
 
     public String acceptInput()
     {
-        Scanner sc = new Scanner(System.in);
-        return sc.nextLine();
+      return console.acceptInput();
     }
 
 
     public void displayUserMenu() {
-        System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.println("List Books\nQuit\nCheckOut Book\nReturn Book\nList Movies\nCheckOut Movie\nReturn Movie\nLogOut\nProfile");
+        System.out.println("\n\nEnter your choice from the Menu:\n");
+        System.out.println("List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nQuit\nLogOut\nProfile");
     }
 
     public void displayMenu() {
-        System.out.println("\n\nEnter your choice from the Menu:");
-        System.out.println("List Books\nQuit\nCheckOut Book\nReturn Book\nList CheckedOut Book\nList Movies\nCheckOut Movie\nReturn Movie\nList CheckedOut Movie\nLogOut\nProfile");
+        System.out.println("\n\nEnter your choice from the Menu:\n");
+        System.out.println("List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nList Checkedout Book\nList Checkedout Movie\nLogOut\nProfile\nQuit");
     }
 
 

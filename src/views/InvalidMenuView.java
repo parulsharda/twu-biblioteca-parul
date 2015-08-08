@@ -1,4 +1,4 @@
-package com.twu.biblioteca;
+package views;
 
 public class InvalidMenuView implements ViewInterface {
 

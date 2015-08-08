@@ -21,6 +21,7 @@ public class BibliotecaApp {
     }
 
     public void start() {
+
         view.welcome();
 
         while(true) {
@@ -50,7 +51,6 @@ public class BibliotecaApp {
                     users = null;
                     break;
                 }
-
                 OperationOnLibrarry libraryOperation = parser.convertIntoDomain(userInput, users);
                 libraryOperation.execute();
                 }

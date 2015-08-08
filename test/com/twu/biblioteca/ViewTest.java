@@ -30,7 +30,8 @@ public class ViewTest {
 
     @Test
     public void checkTheWelcomeMessage() {
-        View welcomeScreen = new View();
+        ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+        View welcomeScreen = new View(consoleInputOutput);
         welcomeScreen.welcome();
         assertEquals("Welcome to Biblioteca\n", outContent.toString());
     }
@@ -39,7 +40,8 @@ public class ViewTest {
 
     @Test
     public void checkTheBooksListMessage() {
-        View view = new View();
+        ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+        View view = new View(consoleInputOutput);
 
         ArrayList<LibraryItem> bookCollection = new ArrayList<LibraryItem>();
         ArrayList<LibraryItem> checkedBookCollection = new ArrayList<LibraryItem>();
@@ -59,18 +61,20 @@ public class ViewTest {
 
     @Test
     public void viewCanDisplayListOfAvailableMenu() {
-        View view = new View();
+        ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+        View view = new View(consoleInputOutput);
 
         view.displayMenu();
 
-        Assert.assertEquals("\n\nEnter your choice from the Menu:\nList Books\n" +
-                "Quit\nCheckOut Book\nReturn Book\nList CheckedOut Book\nList Movies\nCheckOut Movie\nReturn Movie\nList CheckedOut Movie\nLogOut\nProfile\n", outContent.toString());
+        Assert.assertEquals("\n\nEnter your choice from the Menu:\n\n" +
+                "List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nList Checkedout Book\nList Checkedout Movie\nLogOut\nProfile\nQuit\n", outContent.toString());
     }
 
 
     @Test
     public void viewCanDisplayInvalidCommandMessage() {
-        View view = new View();
+        ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+        View view = new View(consoleInputOutput);
 
         view.displayInvalidCommandMessage();
 
@@ -86,7 +90,8 @@ public class ViewTest {
 
     @Test
     public void shouldDisplayMovieList() {
-        View view = new View();
+        ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+        View view = new View(consoleInputOutput);
         ArrayList<LibraryItem> movieCollection = new ArrayList<LibraryItem>();
         ArrayList<LibraryItem> checkedMovieCollection = new ArrayList<LibraryItem>();
 

@@ -51,7 +51,7 @@ public class Library {
         for(LibraryItem item : checkedoutCollection) {
             String details = item.toString();
             details += " " + hashMap.get(item).toPrint();
-            System.out.print(details);
+            System.out.println(details);
         }
     }
 

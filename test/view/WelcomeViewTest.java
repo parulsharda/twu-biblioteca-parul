@@ -1,9 +1,12 @@
-package com.twu.biblioteca;
+package view;
 
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import views.MainLoginMenuView;
+import views.ViewInterface;
+import views.WelcomeView;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

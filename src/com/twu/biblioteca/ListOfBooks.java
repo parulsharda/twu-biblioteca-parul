@@ -12,7 +12,8 @@ public class ListOfBooks implements OperationOnLibrarry {
     }
 
     @Override
-    public void execute() {
+    public void execute()
+    {
         view.showDetailsOfBook(books);
     }
 }

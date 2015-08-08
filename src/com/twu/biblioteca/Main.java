@@ -5,7 +5,11 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String args[]) {
-        View view = new View();
+
+
+        ConsoleInputOutput console = new ConsoleInputOutput();
+        View view = new View(console);
+
         ArrayList<LibraryItem> bookCollection = new ArrayList<LibraryItem>();
         ArrayList<LibraryItem> checkedBookCollection = new ArrayList<LibraryItem>();
 
@@ -38,10 +42,9 @@ public class Main {
         LoginView loginView = new LoginView(view,user1,authenticateLogin);
         MenuView menuView = new MenuView(view);
 
-        BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView,user1,authenticateLogin);
 
-        /*ViewInterface viewInterface =new LoginView1();
-        WelcomeView welcomeView = new WelcomeView(loginView);*/
+
+        BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView,user1,authenticateLogin);
 
         application.start();
     }

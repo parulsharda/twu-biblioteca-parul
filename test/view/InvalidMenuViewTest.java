@@ -1,9 +1,8 @@
-package com.twu.biblioteca;
+package view;
 
+import views.InvalidMenuView;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
-import org.mockito.Mockito;
 
 
 import java.io.ByteArrayOutputStream;

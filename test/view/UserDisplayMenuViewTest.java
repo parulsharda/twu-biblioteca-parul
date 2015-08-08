@@ -1,11 +1,14 @@
-package com.twu.biblioteca;
+package view;
 
+import com.twu.biblioteca.ConsoleInputOutput;
+import com.twu.biblioteca.View;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
+
 
 public class UserDisplayMenuViewTest {
 
@@ -23,11 +26,12 @@ public class UserDisplayMenuViewTest {
     @Test
     public void viewCanDisplayListOfAvailableMenu() {
 
-        View view = new View();
+        ConsoleInputOutput consoleInputOutput = new ConsoleInputOutput();
+        View view = new View(consoleInputOutput);
 
         view.displayMenu();
 
-        Assert.assertEquals("\n\nEnter your choice from the Menu:\nList Books\n" +
-                "Quit\nCheckOut Book\nReturn Book\nList CheckedOut Book\nList Movies\nCheckOut Movie\nReturn Movie\nList CheckedOut Movie\nLogOut\nProfile\n", outContent.toString());
+        Assert.assertEquals("\n\nEnter your choice from the Menu:\n\nList Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nList Checkedout Book\nList Checkedout Movie\nLogOut\nProfile\nQuit\n", outContent.toString());
     }
+
 }

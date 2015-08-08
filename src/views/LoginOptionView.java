@@ -1,4 +1,10 @@
-package com.twu.biblioteca;
+package views;
+
+import com.twu.biblioteca.AuthenticateLogin;
+import com.twu.biblioteca.Scanner;
+import com.twu.biblioteca.Users;
+import views.ViewInterface;
+import views.ViewParser;
 
 public class LoginOptionView implements ViewInterface {
     Scanner scanner;

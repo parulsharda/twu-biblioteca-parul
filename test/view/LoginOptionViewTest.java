@@ -1,8 +1,13 @@
-package com.twu.biblioteca;
+package view;
 
+import com.twu.biblioteca.AuthenticateLogin;
+import views.LoginOptionView;
+import com.twu.biblioteca.Scanner;
+import com.twu.biblioteca.Users;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
+import views.*;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

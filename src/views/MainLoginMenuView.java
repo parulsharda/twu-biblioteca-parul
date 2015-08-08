@@ -1,4 +1,7 @@
-package com.twu.biblioteca;
+package views;
+
+import com.twu.biblioteca.Scanner;
+import views.ViewParser;
 
 public class MainLoginMenuView implements ViewInterface{
     ViewInterface quitView;
