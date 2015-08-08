@@ -28,8 +28,12 @@
             <test name="com.twu.biblioteca.ListOfBooksTest" haltonfailure="true" haltonerror="true"/>
             <test name="com.twu.biblioteca.ListOfMoviesTest" haltonfailure="true" haltonerror="true"/>
             <test name="com.twu.biblioteca.UsersTest" haltonfailure="true" haltonerror="true"/>
-            <test name="com.twu.biblioteca.MenuViewTest" haltonfailure="true" haltonerror="true"/>
             <test name="com.twu.biblioteca.LoginViewTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.ParserTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.BookTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.MovieTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.UsersTest" haltonfailure="true" haltonerror="true"/>
+
         </junit>
     </target>
 

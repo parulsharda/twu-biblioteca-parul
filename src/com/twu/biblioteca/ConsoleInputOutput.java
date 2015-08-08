@@ -9,4 +9,15 @@ public class ConsoleInputOutput {
         java.util.Scanner sc = new java.util.Scanner(System.in);
         return sc.nextLine();
     }
+
+    public void display(String msg)
+
+    {
+        System.out.println(msg);
+    }
+
+
 }
+
+
+

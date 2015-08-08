@@ -34,7 +34,7 @@ public class ParserTest {
         Parser parser = new Parser(view, book, movie);
         Users users = Mockito.mock(Users.class);
 
-        OperationOnLibrarry result = parser.convertIntoDomain("CheckOut Book", users);
+        OperationOnLibrarry result = parser.convertIntoDomain("Checkout Book", users);
 
         assertEquals(CheckOut.class, result.getClass());
     }

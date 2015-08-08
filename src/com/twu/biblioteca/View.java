@@ -1,7 +1,6 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 
 public class View {
@@ -13,21 +12,12 @@ public class View {
     }
 
     public void welcome() {
-
-        System.out.println("Welcome to Biblioteca");
+        console.display("Welcome to Boblioteca");
     }
 
 
-    public void show(String msg)
-    {
-
-        System.out.println(msg);
-    }
-
-    public void showBooks(ArrayList<String> booksList) {
-        System.out.println("\nThe Books in Library are:");
-        for (String books : booksList)
-            System.out.println(" " + books);
+    public void show(String msg) {
+        console.display(msg);
     }
 
 
@@ -47,42 +37,42 @@ public class View {
         }
     }
 
-    public String acceptInput()
-    {
-      return console.acceptInput();
+    public String acceptInput() {
+        return console.acceptInput();
     }
 
 
     public void displayUserMenu() {
-        System.out.println("\n\nEnter your choice from the Menu:\n");
-        System.out.println("List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nQuit\nLogOut\nProfile");
+        console.display("\n\nEnter your choice from the Menu:\n");
+        console.display("List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nQuit\nLogOut\nProfile");
     }
 
     public void displayMenu() {
-        System.out.println("\n\nEnter your choice from the Menu:\n");
-        System.out.println("List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nList Checkedout Book\nList Checkedout Movie\nLogOut\nProfile\nQuit");
+
+        console.display("\n\nEnter your choice from the Menu:\n");
+        console.display("List Books\nList Movies\nCheckout Book\nCheckout Movie\nReturn Book\nReturn Movie\nList Checkedout Book\nList Checkedout Movie\nLogOut\nProfile\nQuit");
     }
 
 
     public void displayInvalidCommandMessage() {
-        System.out.println("Select a valid option!");
+        console.display("Select a valid option !!");
     }
 
     public void successMsg() {
-        System.out.println("Thank you! Enjoy the book");
+        console.display("Thank you! Enjoy the item");
     }
 
     public void noSuccessMsg() {
-        System.out.println("That book is not available");
+        console.display("That book is not available");
     }
-
 
     public void successReturnMsg() {
-        System.out.println("Thank you for returning the book");
+        console.display("Thank you for returning the book");
     }
 
+
     public void noSuccessReturnMsg() {
-        System.out.println("That is not a valid book to return");
+        console.display("That is not a valid book to return");
     }
 }
 

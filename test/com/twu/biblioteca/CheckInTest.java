@@ -38,7 +38,7 @@ public class CheckInTest {
         Mockito.when(view.acceptInput()).thenReturn("Game of Thrones");
     }
 
-
+/*
     @Test
     public void checkIfViewMethodSuccessMsgIsCalled() {
         View view = Mockito.mock(View.class);
@@ -54,5 +54,5 @@ public class CheckInTest {
         Mockito.when(library.checkIn(anyString(),users)).thenReturn(true);
         checkIn.execute();
         Mockito.verify(view).successReturnMsg();
-    }
+    }*/
 }
