@@ -1,6 +1,5 @@
 package com.twu.biblioteca;
 
-import java.util.ArrayList;
 
 public class ListOfMovies implements OperationOnLibrarry {
     private View view;

@@ -4,7 +4,7 @@ package com.twu.biblioteca;
 public class CheckIn implements OperationOnLibrarry {
     private View view;
     private Library books;
-    private  Users users;
+    private Users users;
 
     public CheckIn(View view, Library books, Users users) {
         this.view = view;
@@ -16,15 +16,13 @@ public class CheckIn implements OperationOnLibrarry {
     @Override
     public void execute() {
         String requestedBook = view.acceptInput();
-        if (books.checkIn(requestedBook,users)) {
+        if (books.checkIn(requestedBook, users)) {
             view.successReturnMsg();
-        }
-        else {
+        } else {
             view.noSuccessReturnMsg();
         }
 
     }
-
 }
 
 

@@ -11,12 +11,10 @@ public class Library {
 
     HashMap<LibraryItem, Users> hashMap = new HashMap<LibraryItem, Users>();
 
-
     public Library(ArrayList<LibraryItem> availableLibraryItems, ArrayList<LibraryItem> checkedOutLibraryItems) {
         this.availableCollection = availableLibraryItems;
         this.checkedoutCollection = checkedOutLibraryItems;
     }
-
 
     public boolean checkout(String bookToBeCheckedOut, Users users) {
         for (LibraryItem book : availableCollection) {
@@ -32,8 +30,6 @@ public class Library {
 
     public boolean checkIn(String bookToBeReturned, Users users) {
         for (LibraryItem book : checkedoutCollection) {
-            System.out.print(users);
-            System.out.println(hashMap.get(book));
             if ((book.hasTitle(bookToBeReturned)) && users == hashMap.get(book)) {
                 checkedoutCollection.remove(book);
                 availableCollection.add(book);
@@ -53,10 +49,6 @@ public class Library {
         }
     }
 
-
-    /*public ArrayList<LibraryItem> ListCheckedOutBooks() {
-        return checkedoutCollection;
-    }*/
 
     public ArrayList<LibraryItem> ListAvailableBooks() {
         return availableCollection;

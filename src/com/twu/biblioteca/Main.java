@@ -23,27 +23,24 @@ public class Main {
         ArrayList<LibraryItem> checkedMovieCollection = new ArrayList<LibraryItem>();
 
         Movie movie1 = new Movie("Bajrangi Bhaijaan", "Kabir Khan", "2015", "8.5");
-        Movie movie2 = new Movie("Maine Pyaar Kyun Kiya?", " David Dhawan", "2005", "6.5");
+        Movie movie2 = new Movie("Maine Pyaar Kiya?", "David Dhan", "2005", "6.5");
         movieCollection.add(movie1);
         movieCollection.add(movie2);
 
         ArrayList<Users> users = new ArrayList<Users>();
-        Users user1 = new Users("999-1919","nancy","Admin","nancysharma@gmail.com","9890976754");
-        Users user2  = new Users("111-1919","parul", "User","parulsharma@gmail.com","989796959");
+        Users user = new Users("999-1919", "nancy", "Admin", "nancysharma@gmail.com", "9890976754");
+        Users user1 = new Users("111-1919", "parul", "User", "parulsharma@gmail.com", "989796959");
+        users.add(user);
         users.add(user1);
-        users.add(user2);
-
 
         Library booklibrary = new Library(bookCollection, checkedBookCollection);
         Library movielibrary = new Library(movieCollection, checkedMovieCollection);
 
         AuthenticateLogin authenticateLogin = new AuthenticateLogin(users);
         Parser parser = new Parser(view, booklibrary, movielibrary);
-        LoginView loginView = new LoginView(view,user1,authenticateLogin);
+        LoginView loginView = new LoginView(view, user1, authenticateLogin);
         MenuView menuView = new MenuView(view);
-
-
-        BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView,user1,authenticateLogin);
+        BibliotecaApp application = new BibliotecaApp(view, parser, loginView, menuView, user1, authenticateLogin);
 
         application.start();
     }

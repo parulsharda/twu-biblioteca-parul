@@ -8,7 +8,6 @@ public class MenuView {
     }
 
     public boolean displayMenu(View view) {
-
         view.show("\nMENU:\n1. Login\n2. Quit");
         String input = view.acceptInput();
         return !input.equals("Quit");

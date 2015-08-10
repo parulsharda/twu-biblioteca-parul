@@ -16,14 +16,16 @@ public class View {
     }
 
 
-    public void show(String msg) {
+    public void show(String msg)
+    {
         console.display(msg);
     }
 
 
     public void showDetailsOfBook(Library collection) {
         ArrayList<LibraryItem> coll = collection.ListAvailableBooks();
-        System.out.format("%-25s%25s%25s\n", "Name", "Author", "Years");
+        console.format("%-25s%25s%55s\n", "Name", "Author", "Years");
+        console.display("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
         for (LibraryItem book : coll) {
             System.out.println(book);
         }
@@ -31,7 +33,8 @@ public class View {
 
     public void showDetailsOfMovie(Library movies) {
         ArrayList<LibraryItem> coll = movies.ListAvailableBooks();
-        System.out.format("%-25s%25s%25s%25s\n", "Name", "Director", "Years", "Rating");
+        System.out.format("%-25s%35s%35s%35s\n", "Name", "Director", "Years", "Rating");
+        console.display("- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
         for (LibraryItem movie : coll) {
             System.out.println(movie);
         }

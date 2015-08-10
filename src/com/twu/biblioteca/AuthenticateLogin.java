@@ -2,6 +2,7 @@ package com.twu.biblioteca;
 
 import java.util.ArrayList;
 
+
 public class AuthenticateLogin {
     ArrayList<Users> users;
 
@@ -9,13 +10,13 @@ public class AuthenticateLogin {
         this.users = users;
     }
 
-    public Users check(String name, String password) {
-        for(Users itruser : users) {
-            if (name.equals(itruser.username) && (password.equals(itruser.password))) {
-                return itruser;
+    public Users authenticateUser(String name, String password) {
+        for (Users allUsers : users) {
+            if (name.equals(allUsers.username) && (password.equals(allUsers.password))) {
+                return allUsers;
             }
         }
-            return null;
+        return null;
 
     }
 }

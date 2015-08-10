@@ -8,7 +8,7 @@ public class Users {
     String contact_number;
 
 
-    public Users(String username, String password, String role,String email_id,String contact_number) {
+    public Users(String username, String password, String role, String email_id, String contact_number) {
         this.username = username;
         this.password = password;
         this.role = role;
@@ -17,23 +17,14 @@ public class Users {
     }
 
     @Override
-    public  String toString()
-    {
-        return username + "\t\t\t\t" + email_id + "\t\t\t\t\t" + contact_number  ;
+    public String toString() {
+        return username + "\t\t\t\t" + email_id + "\t\t\t\t\t" + contact_number;
     }
 
 
     public boolean isAdmin() {
-
         return role.equals("Admin");
     }
-       /* if(roleOfUser.equals(role)) {
-            return true;
-        }
-        else
-            return false;
-        }*/
-
 
     public String toPrint() {
         return username;

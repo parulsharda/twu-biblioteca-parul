@@ -1,6 +1,6 @@
 package com.twu.biblioteca;
 
-public class Movie implements LibraryItem{
+public class Movie implements LibraryItem {
     String moviename;
     String director;
     String year;
@@ -19,9 +19,8 @@ public class Movie implements LibraryItem{
     }
 
     @Override
-    public  String toString()
-    {
-        return moviename + "\t\t\t\t" + director + "\t\t\t\t\t" + year + "\t\t\t\t" + rating ;
+    public String toString() {
+        return moviename + "\t\t\t\t\t" + director + "\t\t\t\t" + year + "\t\t\t\t" + rating;
     }
 }
 

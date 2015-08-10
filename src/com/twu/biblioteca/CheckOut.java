@@ -7,7 +7,7 @@ public class CheckOut implements OperationOnLibrarry {
     private Library library;
     private Users users;
 
-    public CheckOut(View view,Library library,Users users) {
+    public CheckOut(View view, Library library, Users users) {
         this.view = view;
         this.library = library;
         this.users = users;
@@ -17,10 +17,9 @@ public class CheckOut implements OperationOnLibrarry {
     @Override
     public void execute() {
         String requestedBook = view.acceptInput();
-        if (library.checkout(requestedBook,users)) {
+        if (library.checkout(requestedBook, users)) {
             view.successMsg();
-        }
-        else {
+        } else {
             view.noSuccessMsg();
         }
     }

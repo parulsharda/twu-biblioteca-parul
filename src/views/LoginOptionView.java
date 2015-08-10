@@ -34,7 +34,7 @@ public class LoginOptionView implements ViewInterface {
         String username = scanner.acceptInput();
         System.out.print("Enter Password:\n");
         String password = scanner.acceptInput();
-        currentUser = authenticateLogin.check(username,password);
+        currentUser = authenticateLogin.authenticateUser(username,password);
     }
 
     @Override
