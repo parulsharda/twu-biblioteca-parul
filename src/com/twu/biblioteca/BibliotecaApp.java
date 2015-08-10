@@ -26,9 +26,9 @@ public class BibliotecaApp {
 
         while(true) {
            boolean status = menuView.displayMenu(view);
-            /*if(status == false) {
+            if(status == false) {
                 break;
-            }*/
+            }
             users = loginView.getLoginDetails(view, authenticateLogin);
             while (true) {
                 if(users == null) {

@@ -1,7 +1,4 @@
 package com.twu.biblioteca;
-
-import java.util.ArrayList;
-
 public class ListOfCheckedOutBook implements OperationOnLibrarry {
     View view;
     Library library;

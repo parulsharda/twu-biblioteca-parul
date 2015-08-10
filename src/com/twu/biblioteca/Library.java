@@ -54,9 +54,9 @@ public class Library {
     }
 
 
-    public ArrayList<LibraryItem> ListCheckedOutBooks() {
+    /*public ArrayList<LibraryItem> ListCheckedOutBooks() {
         return checkedoutCollection;
-    }
+    }*/
 
     public ArrayList<LibraryItem> ListAvailableBooks() {
         return availableCollection;
