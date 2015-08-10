@@ -1,4 +1,6 @@
 package com.twu.biblioteca;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
@@ -10,11 +12,15 @@ import static org.mockito.Mockito.verify;
 
 public class LoginViewTest {
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+    PrintStream original;
 
+    @Before
+    public void setUpStreams() {
+        original = System.out;
+        System.setOut(new PrintStream(outContent));
+    }
     @Test
     public void toGetTheUserIdAndPassword(){
-        System.setOut(new PrintStream(outContent));
-
 
         ArrayList<Users> arrusers = new ArrayList<Users>();
         Users users = new Users("Parul","nancy","Admin","nancysharma@gmail.com","9890976754");
@@ -28,7 +34,12 @@ public class LoginViewTest {
         verify(view).show("Enter the User Name");
         verify(view).show("Enter the Password");
 
-        System.setOut(System.out);
 
+    }
+
+    @After
+    public void cleanUpStreams() {
+
+        System.setOut(original);
     }
 }

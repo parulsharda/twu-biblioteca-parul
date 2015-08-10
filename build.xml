@@ -1,4 +1,96 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
+
+<project name="biblioteca" default="runjunit" basedir=".">
+
+    <property name="lib.dir" value="lib"/>
+
+    <mkdir dir="build" />
+
+    <path id="classpath">
+        <fileset dir="${lib.dir}" includes="junit-4.11.jar"/>
+        <fileset dir="${lib.dir}" includes="mockito-all-1.9.5.jar"/>
+    </path>
+
+    <target name="compile">
+        <javac srcdir="src;test" includeantruntime="false" destdir="build" classpathref="classpath"/>
+    </target>
+
+    <target name="runjunit" depends="compile">
+        <junit haltonfailure="true" printsummary="true" showoutput="yes">
+            <classpath location="lib/junit-4.11.jar" path="antBuild"/>
+            <classpath location="lib/mockito-all-1.9.5.jar" path="antBuild"/>
+            <test name="com.twu.biblioteca.ViewTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.LibraryTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.CheckOutTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.CheckInTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.InvalidOptionTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.ListOfBooksTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.ListOfMoviesTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.UsersTest" haltonfailure="true" haltonerror="true"/>
+          <!--  <test name="com.twu.biblioteca.LoginViewTest" haltonfailure="true" haltonerror="true"/> -->
+            <test name="com.twu.biblioteca.ParserTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.BookTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.MovieTest" haltonfailure="true" haltonerror="true"/>
+            <test name="com.twu.biblioteca.UsersTest" haltonfailure="true" haltonerror="true"/>
+            <classpath>
+                <pathelement location="build"/>
+                <path refid="classpath"/>
+            </classpath>
+            <formatter type="plain" usefile="false"/>
+        </junit>
+    </target>
+
+    <target name="createjar" depends="runjunit">
+        <jar destfile="lib/app.jar"
+             basedir="build"
+             excludes="**/Test.class"/>
+    </target>
+
+    <target name="run" depends="createjar">
+        <java classname="com.twu.biblioteca.Main">
+            <arg value="-h"/>
+            <classpath>
+                <pathelement location="lib/app.jar"/>
+                <pathelement path="${java.class.path}"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="justrun" depends="createjar">
+        <java classname="com.twu.biblioteca.Main">
+            <arg value="-h"/>
+            <classpath>
+                <pathelement location="lib/app.jar"/>
+                <pathelement path="${java.class.path}"/>
+            </classpath>
+        </java>
+    </target>
+
+</project>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<?xml version="1.0" encoding="UTF-8"?>
 <project name="TWU_Biblioteca-master[bibliotica]" default="run">
 
     <property name="lib.dir" value="lib"/>
@@ -51,4 +143,4 @@
             </classpath>
         </java>
     </target>
-</project>
+</project> -->
