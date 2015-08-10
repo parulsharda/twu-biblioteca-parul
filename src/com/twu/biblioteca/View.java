@@ -12,7 +12,7 @@ public class View {
     }
 
     public void welcome() {
-        console.display("Welcome to Boblioteca");
+        console.display("Welcome to Biblioteca");
     }
 
 

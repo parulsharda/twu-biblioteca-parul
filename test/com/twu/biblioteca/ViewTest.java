@@ -78,7 +78,7 @@ public class ViewTest {
 
         view.displayInvalidCommandMessage();
 
-        Assert.assertEquals("Select a valid option!\n", outContent.toString());
+        Assert.assertEquals("Select a valid option !!\n", outContent.toString());
     }
 
 

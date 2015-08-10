@@ -4,8 +4,8 @@ import java.util.ArrayList;
 
 
 public class Main {
-    public static void main(String args[]) {
 
+    public static void main(String args[]) {
 
         ConsoleInputOutput console = new ConsoleInputOutput();
         View view = new View(console);
@@ -41,7 +41,6 @@ public class Main {
         Parser parser = new Parser(view, booklibrary, movielibrary);
         LoginView loginView = new LoginView(view,user1,authenticateLogin);
         MenuView menuView = new MenuView(view);
-
 
 
         BibliotecaApp application = new BibliotecaApp(view, parser,loginView,menuView,user1,authenticateLogin);

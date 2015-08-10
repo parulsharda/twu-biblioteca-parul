@@ -8,7 +8,7 @@ import static junit.framework.TestCase.assertEquals;
 public class MovieTest {
 
     @Test
-    public void xyz() {
+    public void shouldReturnTrueIfMovieHasNameSelected() {
 
         Movie movie = new Movie("Bajrangi Bhaijaan", "2015", "Kabir Khan", "8.5");
 
