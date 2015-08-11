@@ -1,5 +1,4 @@
 *.text
 out/
 *.iml
-*.idea
 .DS_Store
