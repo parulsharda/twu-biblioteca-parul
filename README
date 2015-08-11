@@ -14,15 +14,11 @@ Requirements
 
     [3] JUnit 4.10.jar
 
-Input
+Functionality
 =============
 
-    The Input of the application is initial position and heading direction of rover followed by string representing sequence of operations to be performed by the rover.
+   The library allows the user to perform actions like ListContents CheckOut CheckIn on the items of library.
 
-Output
-========
-
-    The application will return the final position and direction of rover .
 
 How to Run?
 ============

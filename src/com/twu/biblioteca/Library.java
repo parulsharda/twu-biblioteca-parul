@@ -44,7 +44,7 @@ public class Library {
     public void ListCheckedBookDetails() {
         for (LibraryItem item : checkedoutCollection) {
             String details = item.toString();
-            details += " " + hashMap.get(item).toPrint();
+            details += "\t\t" + hashMap.get(item).toPrint();
             System.out.println(details);
         }
     }
